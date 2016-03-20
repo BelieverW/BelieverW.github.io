@@ -189,9 +189,9 @@
     </header>
 
     <div class="image-wrap">
-      <img src="http://7xs1zn.com1.z0.glb.clouddn.com/img%2Fpersonalpage%2Fidnex.jpg" alt="image"/>
+      <img src="http://7xs1zn.com1.z0.glb.clouddn.com/img%2Fpersonalpage%2Findex2.jpg" alt="image"/>
       <p class="image-credit">
-        Photo Credit: <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50740918">Pixiv - PiNe(パイネ)</a>
+        Photo Credit: <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id=50740918">Pixiv&nbsp;-&nbsp; PiNe(パイネ)</a>
       </p>
     </div>
 
@@ -201,139 +201,6 @@
           <div id="content" class="content" style="margin-top: 0px">
             
   <section id="posts" class="posts-expand">
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/19/Decode Ways/" itemprop="url">
-                  Decode Ways
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-19T23:27:07+08:00" content="2016-03-19">
-              2016-03-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithm</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/19/Decode Ways/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/19/Decode Ways/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <a id="more"></a>
-<h2 id="Lintcode-solution-Decode-Ways"><a href="#Lintcode-solution-Decode-Ways" class="headerlink" title="Lintcode solution: Decode Ways"></a>Lintcode solution: Decode Ways</h2><p>A message containing letters from A-Z is being encoded to numbers using the following mapping:</p>
-<blockquote>
-<p>‘A’ -&gt; 1<br>‘B’ -&gt; 2<br>…<br>‘Z’ -&gt; 26</p>
-</blockquote>
-<p>Given an encoded message containing digits, determine the total number of ways to decode it.</p>
-<blockquote>
-<p>EXAMPLE: Given encoded message 12, it could be decoded as AB (1 2) or L (12).<br>The number of ways decoding 12 is 2.</p>
-</blockquote>
-<p>First, we need a array with length eqauls s.length() + 1, since we need to add 0 before the given string just for convience. (p.s. we will do similar thing for DP problem in many cases)</p>
-<p>Let array <code>nums</code> store the value in string, array <code>result</code> store the decode ways for string.</p>
-<p>There are two kinds of conditions:  </p>
-<ol>
-<li>the value in <code>nums[i]</code> that you are dealing with is not 0</li>
-<li>the value in <code>nums[i]</code> that you are dealing with eqauls 0 </li>
-</ol>
-<p>For the first condition, since <code>nums[i]</code> is not 0, it can convert to a meaningful charater by itself. So the total possible decode ways, <code>result[i]</code>, at least same as <code>result[i - 1]</code>.<br>Then we consider if it is able to combine with <code>nums[i - 1]</code>. If the value <code>nums[i - 1] * 10 + nums[i]</code> is greater than <code>10</code> and smaller than <code>26</code>, which means <code>nums[i - 1] * 10 + nums[i]</code> is a available value, <code>result[i]</code> is able to add <code>result[i - 1]</code>. Otherwise, it is not able to do that.</p>
-<p>For the second condition, since <code>nums[i]</code> is 0, it can not convert to a meaningful character by itself. It must combine with <code>nums[i - 1]</code>. So we could assume <code>nums[i - 1] * 10 + nums[i]</code> is the value we are dealing with. the <code>result[i]</code> can only possibly come from <code>result[i - 2]</code>. The following operation is same as condition 1.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[s.length() + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">// 在string前面加了一个0</span></span><br><span class="line">        nums[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        nums[<span class="number">1</span>] = s.charAt(<span class="number">0</span>) != <span class="string">'0'</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.charAt(i - <span class="number">1</span>) != <span class="string">'0'</span>) &#123;</span><br><span class="line">                nums[i] = nums[i - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> twoDigits = (s.charAt(i - <span class="number">2</span>) - <span class="string">'0'</span>) * <span class="number">10</span> + s.charAt(i - <span class="number">1</span>) - <span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">if</span> (twoDigits &gt;= <span class="number">10</span> &amp;&amp; twoDigits &lt;= <span class="number">26</span>) &#123;</span><br><span class="line">                nums[i] += nums[i - <span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[s.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
     
       
 
@@ -424,102 +291,129 @@
 
       
         
-          
-            <a id="more"></a>
-<h2 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h2><blockquote>
-<p>reference: <a href="http://www.runoob.com/css/css-tutorial.html" target="_blank" rel="external">http://www.runoob.com/css/css-tutorial.html</a> and <a href="http://www.jikexueyuan.com/course/164_6.html?ss=1" target="_blank" rel="external">http://www.jikexueyuan.com/course/164_6.html?ss=1</a>  </p>
-</blockquote>
-<h2 id="CSS盒子模型概述"><a href="#CSS盒子模型概述" class="headerlink" title="CSS盒子模型概述"></a>CSS盒子模型概述</h2><p><img src="http://7xs1zn.com1.z0.glb.clouddn.com/model.jpg" alt="model">  </p>
-<p>CSS盒子模型中，内部红色部分为内容，绿色部分为内边界，黄色线处为边框，外部银白色处外边距。<br>可以看到<code>height</code>与<code>width</code>所指定的高和宽为内容部分的尺寸。  </p>
-<h2 id="内边距"><a href="#内边距" class="headerlink" title="内边距"></a>内边距</h2><p>内边距在content外，边框内  </p>
-<h3 id="内边距属性："><a href="#内边距属性：" class="headerlink" title="内边距属性："></a>内边距属性：</h3><p><img src="http://7xs1zn.com1.z0.glb.clouddn.com/padding.jpg" alt="padding"> </p>
-<p>示例：  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">"padding:100px"</span>&gt;</span>内边距<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上面代码的执行效果如下，会在表格内部<code>&lt;td&gt;</code> 上下左右各填充100px的空余空间。<code>padding-right</code> , <code>padding-left</code> , <code>padding-top</code> , <code>padding-bottom</code> 具有类似的语义。</p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/padding.png" alt="padding"><br></div> 
+          <p>这篇笔记是我在上Baidu IFE课程进行Task Two时整理的一些资料。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/19/CSS-BOXMODE/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
 
-<h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><ol>
-<li>CSS边框：  <ul>
-<li>可以创建出效果出色的边框，并且可以应用于任何元素</li>
-</ul>
-</li>
-<li>边框样式：  <ul>
-<li>border-style: 定义了10个不同的非继承样式，包括none</li>
-</ul>
-</li>
-<li>边框的单边样式：  <ul>
-<li>border-top-style  </li>
-<li>border-left-style  </li>
-<li>border-right-style  </li>
-<li>border-bottom-style  </li>
-</ul>
-</li>
-<li>边框的宽度：  <ul>
-<li>border-width  </li>
-</ul>
-</li>
-<li>边框的单边宽度：  <ul>
-<li>border-top-width  </li>
-<li>border-left-width  </li>
-<li>border-right-width  </li>
-<li>border-bottom-width  </li>
-</ul>
-</li>
-<li>边框的颜色：  <ul>
-<li>border-color  </li>
-</ul>
-</li>
-<li>边框的单边颜色：  <ul>
-<li>border-top-color  </li>
-<li>border-left-color  </li>
-<li>border-right-color  </li>
-<li>border-bottom-color  </li>
-</ul>
-</li>
-</ol>
-<h4 id="border-style-测试示例："><a href="#border-style-测试示例：" class="headerlink" title="border-style 测试示例："></a><code>border-style</code> 测试示例：</h4><p>我们在<code>style.css</code> 中编写如下的代码：  </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">border-top-style</span>: double;</span><br><span class="line">    <span class="attribute">border-left-style</span>: dotted;</span><br><span class="line">    <span class="attribute">border-right-style</span>: groove;</span><br><span class="line">    <span class="attribute">border-bottom-style</span>: solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在我们的html编写如下代码:  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>CSS边框测试<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在网页中显示效果如下：  </p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/border1.jpg" alt="border"><br></div> 
+    <div>
+      
+    </div>
 
-<h4 id="border-width-测试示例："><a href="#border-width-测试示例：" class="headerlink" title="border-width 测试示例："></a><code>border-width</code> 测试示例：</h4><p>我们在<code>style.css</code> 中添加代码成如下：  </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">border-top-style</span>: double;</span><br><span class="line">    <span class="attribute">border-left-style</span>: dotted;</span><br><span class="line">    <span class="attribute">border-right-style</span>: groove;</span><br><span class="line">    <span class="attribute">border-bottom-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-bottom-width</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在网页中显示效果如下：  </p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/border2.jpg" alt="border"><br></div>  
+    <footer class="post-footer">
+      
 
-<h4 id="其他一些测试示例："><a href="#其他一些测试示例：" class="headerlink" title="其他一些测试示例："></a>其他一些测试示例：</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: aqua;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid red;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">5px</span> chartreuse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果如下：  </p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/border3.jpg" alt="border"><br></div> 
+      
 
-<p>其中：    </p>
-<ul>
-<li><code>border-radius</code> 用于设置边框的圆角；  </li>
-<li><code>border</code> 用于设计边框的边界，第一个参数是线的粗细，第二个参数为边框边界的样式，第三个为颜色；  </li>
-<li><code>box-shadow</code> 用于设计边框阴影：第一个参数表示向右移动<code>10px</code> ，第二个参数表示向下移动<code>10px</code> ，第三个参数表示阴影的透明度，第四个参数表示阴影的颜色。</li>
-</ul>
-<h3 id="外边距"><a href="#外边距" class="headerlink" title="外边距"></a>外边距</h3><h4 id="Margin"><a href="#Margin" class="headerlink" title="Margin"></a>Margin</h4><p>margin清除周围的元素（外边框）的区域。margin没有背景颜色，是<strong><em>完全透明的</em></strong><br>margin可以单独改变元素的上，下，左，右边距。也可以一次改变所有的属性。  </p>
-<p><img src="http://7xs1zn.com1.z0.glb.clouddn.com/margin.png" alt="margin"></p>
-<p>如下图所示，css代码中为设计<code>body</code> 的<code>margin</code> 时，html代码中<code>&lt;div&gt;</code> 所包裹的部分无法覆盖整个浏览器。这就是body的外边距。  </p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/marginsample1.png" alt="marginsample" width="300" height="200"><br></div><br>当在css中添加如下代码时：<br><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br>显示效果如下：<br><div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/marginsample2.png" alt="marginsample" width="300" height="200"><br></div>   
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
-<h3 id="盒子模型设计综述"><a href="#盒子模型设计综述" class="headerlink" title="盒子模型设计综述"></a>盒子模型设计综述</h3><p>盒子模型在html中用<code>&lt;div&gt;</code> 来表示，如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pd"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">				CSS盒子模型</span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在css用代码如下：  </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bd</span>&#123;</span><br><span class="line">    <span class="attribute">border-style</span>: dotted;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#ffccff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pd</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>最后显示效果如下：  </p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/sum.jpg" alt="sum"><br></div>  
 
-<h3 id="外边距合并"><a href="#外边距合并" class="headerlink" title="外边距合并"></a>外边距合并</h3><p>外边距合并就是一个叠加的概念  </p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/marginmerge.png" alt="sum"><br></div><br>两个盒子会自动合并。<br><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pd"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">				CSS盒子模型</span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container2"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd2"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pd2"</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content2"</span>&gt;</span></span><br><span class="line">				CSS盒子模型2</span><br><span class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><br><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">     <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="selector-class">.bd</span>&#123;</span><br><span class="line">    <span class="attribute">border-style</span>: dotted;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#ffccff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pd</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container2</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bd2</span>&#123;</span><br><span class="line">    <span class="attribute">border-style</span>: dotted;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#ffccff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pd2</span>&#123;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content2</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br>显示效果如下：<br><div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/merge1.jpg" alt="merge1"><br></div><br>如果改变<code>.container{}</code> 中<code>margin</code> 的值为<code>50px</code> ，则显示效果如下：<br><div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/merge2.jpg" alt="merge2"><br></div><br>merge合并所遵循是多的那一部分。<br><br>### CSS3中盒子的类型<br><br><code>&lt;div&gt;</code> 属于block，<code>&lt;span&gt;</code> 属于inline，他们的显示效果如下，其中<code>&lt;div&gt;</code>占据两行属性，<code>&lt;span&gt;</code>为内联元素，占据一行。<br><div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/inlineandblock.png" alt="inlineandblock"><br></div><br>通过在<code>&lt;style&gt;</code>中定义<code>display</code>可以改变其显示属性，代码如下：<br><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line">	<span class="selector-tag">div</span>&#123;</span><br><span class="line">		<span class="attribute">background-color</span>: aqua;</span><br><span class="line">		<span class="attribute">display</span>: inline;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-tag">span</span>&#123;</span><br><span class="line">		<span class="attribute">background-color</span>: greenyellow;</span><br><span class="line">		<span class="attribute">display</span>: block;</span><br><span class="line">	&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure><br><br>显示效果如下：<br><div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/inlineandblock2.jpg" alt="inlineandblock"><br></div>  
+    
+      
 
-<h4 id="inline-block属性"><a href="#inline-block属性" class="headerlink" title="inline-block属性"></a><code>inline-block</code>属性</h4><p><code>inline-block</code>与<code>inline</code>具有相同的显示类型，<font color="red"><strong>那么为什么要出现<code>inline-block</code>类型呢？</strong></font><br><code>inline</code> 不能改变宽度和高度，但<code>inline-block</code>可以设置宽度和高度。如下，我们设置<code>inline-block</code>和<code>inline</code>的<code>width</code>属性都为<code>300px</code>，代码如下：  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line">	<span class="selector-tag">div</span>&#123;</span><br><span class="line">		<span class="attribute">background-color</span>: aqua;</span><br><span class="line">		<span class="attribute">display</span>: inline-block;</span><br><span class="line">		<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="selector-tag">span</span>&#123;</span><br><span class="line">		<span class="attribute">background-color</span>: greenyellow;</span><br><span class="line">		<span class="attribute">display</span>: inline;</span><br><span class="line">		<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>显示效果如下：  </p>
-<div align="center"><br>    <img src="http://7xs1zn.com1.z0.glb.clouddn.com/inlineandblock3.jpg" alt="inlineandblock"><br></div>  
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/19/Decode Ways/" itemprop="url">
+                  Decode Ways
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-19T23:27:07+08:00" content="2016-03-19">
+              2016-03-19
+            </time>
+          </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/19/Decode Ways/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/19/Decode Ways/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Leetcode解题报告：Decode Ways<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/19/Decode Ways/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -612,19 +506,12 @@
 
       
         
-          
-            <a id="more"></a>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/19/hello-world/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
