@@ -1029,7 +1029,7 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   .posts-expand {
-    margin: 0px 20px 0 20px;
+    margin: 0 20px;
   }
   .post-body pre,
   .post-body .highlight {
@@ -1233,7 +1233,7 @@ pre .javascript .function {
   font-size: 16px;
 }
 .posts-expand .post-meta {
-  margin: 3px 0 20px 0;
+  margin: 3px 0 60px 0;
   color: #999;
   font-size: 12px;
   text-align: center;
@@ -1286,7 +1286,7 @@ pre .javascript .function {
   line-height: 2;
 }
 .posts-expand .post-tags {
-  margin-top: 0px;
+  margin-top: 40px;
   text-align: center;
 }
 .posts-expand .post-tags a {
@@ -1296,7 +1296,7 @@ pre .javascript .function {
 }
 .post-nav {
   overflow: hidden;
-  margin-top: 10px;
+  margin-top: 60px;
   padding: 10px;
   white-space: nowrap;
   border-top: 1px solid #eee;
@@ -1518,7 +1518,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e0ff50;
+  background: #aa38ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2259,7 +2259,7 @@ hr {
   display: none;
 }
 .posts-expand .post {
-  margin-top: 40px;
+  margin-top: 120px;
 }
 .posts-expand .post:first-child {
   margin-top: 0;
@@ -2395,10 +2395,11 @@ hr {
   width: 100%;
   height: 350px;
   position: relative;
-  margin-bottom: 0em;
-  overflow: visible;
+  margin-bottom: 2em;
+  overflow: hidden;
 }
 .image-credit {
+  display: inline;
   float: left;
   width: 83.33333%;
   margin-left: 8.33333%;
@@ -2406,6 +2407,7 @@ hr {
   display: block;
   text-align: right;
   font-size: 12px;
+  font-size: 0.75rem;
   line-height: 2.1667;
   line-height: 1.3;
   font-style: italic;
