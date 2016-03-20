@@ -1518,7 +1518,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff0d;
+  background: #06ff98;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2259,7 +2259,7 @@ hr {
   display: none;
 }
 .posts-expand .post {
-  margin-top: 120px;
+  margin-top: 40px;
 }
 .posts-expand .post:first-child {
   margin-top: 0;
