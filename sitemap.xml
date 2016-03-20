@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/03/20/CSS%E5%AE%9A%E4%BD%8D/</loc>
+    
+    <lastmod>2016-03-20T10:59:24.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/19/CSS-BOXMODEL/</loc>
+    
+    <lastmod>2016-03-20T10:24:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2016-03-20T07:02:00.000Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>http://yoursite.com/2016/03/19/Decode%20Ways/</loc>
     
     <lastmod>2016-03-20T06:52:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/03/19/CSS-BOXMODE/</loc>
-    
-    <lastmod>2016-03-20T06:51:33.000Z</lastmod>
     
   </url>
   
