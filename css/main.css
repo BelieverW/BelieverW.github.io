@@ -1367,7 +1367,9 @@ pre .javascript .function {
   bottom: 0;
   z-index: 1040;
   box-shadow: inset 0 2px 6px #000;
-  background: #222;
+  background-image: url("http://7xs1zn.com1.z0.glb.clouddn.com/img%2Fpersonalpage%2Fstar.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   -webkit-transform: translateZ(0);
 }
 .sidebar a {
@@ -1513,7 +1515,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4eff;
+  background: #ff71ff;
 }
 .links-of-blogroll {
   font-size: 13px;
