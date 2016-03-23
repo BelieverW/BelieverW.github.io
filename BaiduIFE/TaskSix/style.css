@@ -29,14 +29,12 @@ header table {
 header table .name {
     font-size: 12px;
     color: #ffffff;
-    font-family: "黑体";
 }
 header .date {
     position: absolute;
     right: 0;
     bottom: 0;
     font-size: 12px;
-    font-family: "黑体";
     color: #d45d5c;
 }
 .top {
@@ -78,7 +76,6 @@ header .date {
 }
 .top .description .title {
     color: #000;
-    font-family: "微软雅黑";
     font-size: 24px;
     text-decoration: underline;
     text-transform: capitalize;
@@ -87,7 +84,6 @@ header .date {
 }
 .top .description .context {
     color: #676767;
-    font-family: "楷体";
     font-size: 12px;
     line-height: 10px;
 }
@@ -98,14 +94,12 @@ header .date {
 }
 .top .description .context-bottom .warning1 {
     color: #75b86b;
-    font-family: "微软雅黑";
     font-size: 116px;
     font-style: italic;
 
 }
 .top .description .context-bottom .warning2, .warning3, .warning4 {
     color: #cc8091;
-    font-family: "微软雅黑";
     font-size: 55px;
     float:left;
     position: relative;
@@ -135,7 +129,6 @@ header .date {
 .middle h2.synopsis, h2.background, h2.video {
     font-size: 16px;
     font-weight: bolder;
-    font-family: "微软雅黑";
     text-decoration: underline;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -152,14 +145,12 @@ header .date {
 .middle .position p.context {
     font-size: 12px;
     color: #767777;
-    font-family: "宋体";
     line-height: 16px;
     text-align:justify
 }
 .middle .position .rate {
     margin-top: 48px;
     font-size: 12px;
-    font-family: "微软雅黑";
     color: #231815;
     opacity: 0.7;
     line-height: 16px;
@@ -180,7 +171,6 @@ header .date {
     float: left;
 }
 .bottom .context .title {
-    font-family: "黑体";
     font-style: italic;
     font-weight: bold;
     text-transform: uppercase;
@@ -206,7 +196,6 @@ header .date {
     font-size: 12px;
     color: #767777;
     line-height: 16px;
-    font-family: "宋体";
     text-align:justify
 }
 .bottom .context .paragraph p.review-2 {
@@ -253,7 +242,6 @@ header .date {
     height: 44px;
     font-size: 26px;
     color: #fff;
-    font-family: "微软雅黑";
     border-left: 3px solid #72b16a;
     margin-left: 60px;
     padding-left: 20px;
@@ -280,7 +268,6 @@ header .date {
     text-align: left;
     line-height: 40px;
     font-size: 16px;
-    font-family: "宋体";
     margin: 20px;
     margin-top: 30px;
 }
@@ -314,7 +301,6 @@ header .date {
 }
 .right .context .white-scholar .num {
     font-size: 110px;
-    font-family: "微软雅黑";
     padding-left: 20px;
     padding-right: 10px;
     display: inline-block;
@@ -330,7 +316,6 @@ header .date {
     margin-left: 0px;
 }
 .right .context .white-scholar .description p {
-    font-family: "黑体";
 }
 .right .context .white-scholar .description p.question {
     font-style: italic;
@@ -353,7 +338,6 @@ header .date {
     text-align: left;
     color: #5a5b5b;
     font-size: 14px;
-    font-family: "微软黑体";
     line-height: 16px;
     text-align: justify;
 }
@@ -387,5 +371,5 @@ footer .name {
     float: right;
     font-size: 12px;
     color: #d45d5c;
-    font-family: "黑体";
+     "黑体";
 }
