@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Algorithm,Leetcode," />
+  <meta name="keywords" content="Leetcode,Algorithm," />
 
 
 
@@ -65,7 +65,7 @@ https://leetcode.com/problems/generate-parentheses/">
 <meta property="og:site_name" content="Entry-Level段子手的日常">
 <meta property="og:description" content="LeetCode Solution: Generate Parentheses
 https://leetcode.com/problems/generate-parentheses/">
-<meta property="og:updated_time" content="2016-03-30T04:21:47.000Z">
+<meta property="og:updated_time" content="2016-03-30T04:23:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Generate Parentheses">
 <meta name="twitter:description" content="LeetCode Solution: Generate Parentheses
@@ -346,7 +346,7 @@ https://leetcode.com/problems/generate-parentheses/">
 <p>For example, given n = 3, a solution set is:</p>
 <p><code>&quot;((()))&quot;</code>, <code>&quot;(()())&quot;</code>, <code>&quot;(())()&quot;</code>, <code>&quot;()(())&quot;</code>, <code>&quot;()()()&quot;</code></p>
 </blockquote>
-<p>This is a easy problem. Keyword is <strong>all combinations</strong>.</p>
+<p>This is an easy problem. The keyword is <strong>all combinations</strong>.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span><br><span class="line">    * <span class="doctag">@param</span> n n pairs</span><br><span class="line">    * <span class="doctag">@return</span> All combinations of well-formed parentheses</span><br><span class="line">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;String&gt; <span class="title">generateParenthesis</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Write your code here</span></span><br><span class="line">        ArrayList&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        String temp = <span class="keyword">new</span> String();</span><br><span class="line"></span><br><span class="line">        helper(result, temp, n, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">helper</span><span class="params">(ArrayList&lt;String&gt; result, String temp, <span class="keyword">int</span> n,</span><br><span class="line">                            <span class="keyword">int</span> leftParentheses, <span class="keyword">int</span> rightParentheses)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (temp.length() == <span class="number">2</span> * n) &#123;</span><br><span class="line">            result.add(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (leftParentheses &lt; n) &#123;</span><br><span class="line">            helper(result, temp + <span class="string">'('</span>, n, leftParentheses + <span class="number">1</span>, rightParentheses);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (rightParentheses &lt; leftParentheses) &#123;</span><br><span class="line">            helper(result, temp + <span class="string">')'</span>, n, leftParentheses, rightParentheses + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -361,9 +361,9 @@ https://leetcode.com/problems/generate-parentheses/">
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
-          
             <a href="/tags/Leetcode/" rel="tag">#Leetcode</a>
+          
+            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
           
         </div>
       
@@ -379,6 +379,10 @@ https://leetcode.com/problems/generate-parentheses/">
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/30/Letter-Combinations-of-a-Phone-Number/" rel="prev" title="Letter Combinations of a Phone Number">
+                Letter Combinations of a Phone Number <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -450,7 +454,7 @@ https://leetcode.com/problems/generate-parentheses/">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
