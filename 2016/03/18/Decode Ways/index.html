@@ -57,25 +57,25 @@
 
 
 
-<meta name="description" content="title: LeetCode Solution - Next Permutationdate: 2016-3-29 21:48:40tags: [Leetcode, Algorithm]categories: Algorithm
+<meta name="description" content="title: LeetCode Solution - Decode Waysdate: 2016-3-19 23:27:07tags: [Lintcode, Algorithm]categories: Algorithm
 
 
-https://leetcode.com/problems/next-permutation/">
+https://leetcode.com/problems/decode-ways/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Entry-Level段子手的日常">
-<meta property="og:url" content="http://yoursite.com/2016/03/29/Next Permutation/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/03/18/Decode Ways/index.html">
 <meta property="og:site_name" content="Entry-Level段子手的日常">
-<meta property="og:description" content="title: LeetCode Solution - Next Permutationdate: 2016-3-29 21:48:40tags: [Leetcode, Algorithm]categories: Algorithm
+<meta property="og:description" content="title: LeetCode Solution - Decode Waysdate: 2016-3-19 23:27:07tags: [Lintcode, Algorithm]categories: Algorithm
 
 
-https://leetcode.com/problems/next-permutation/">
-<meta property="og:updated_time" content="2016-03-30T07:14:05.000Z">
+https://leetcode.com/problems/decode-ways/">
+<meta property="og:updated_time" content="2016-03-30T07:13:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Entry-Level段子手的日常">
-<meta name="twitter:description" content="title: LeetCode Solution - Next Permutationdate: 2016-3-29 21:48:40tags: [Leetcode, Algorithm]categories: Algorithm
+<meta name="twitter:description" content="title: LeetCode Solution - Decode Waysdate: 2016-3-19 23:27:07tags: [Lintcode, Algorithm]categories: Algorithm
 
 
-https://leetcode.com/problems/next-permutation/">
+https://leetcode.com/problems/decode-ways/">
 
 
 
@@ -294,8 +294,8 @@ https://leetcode.com/problems/next-permutation/">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-29T19:52:04+08:00" content="2016-03-29">
-              2016-03-29
+            <time itemprop="dateCreated" datetime="2016-03-18T11:51:43+08:00" content="2016-03-18">
+              2016-03-18
             </time>
           </span>
 
@@ -305,8 +305,8 @@ https://leetcode.com/problems/next-permutation/">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/29/Next Permutation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/29/Next Permutation/" itemprop="commentsCount"></span>
+                <a href="/2016/03/18/Decode Ways/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/18/Decode Ways/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -328,30 +328,25 @@ https://leetcode.com/problems/next-permutation/">
       
 
       
-        <p>title: LeetCode Solution - Next Permutation<br>date: 2016-3-29 21:48:40<br>tags: [Leetcode, Algorithm]<br>categories: Algorithm</p>
+        <p>title: LeetCode Solution - Decode Ways<br>date: 2016-3-19 23:27:07<br>tags: [Lintcode, Algorithm]<br>categories: Algorithm</p>
 <hr>
 <blockquote>
-<p><a href="https://leetcode.com/problems/next-permutation/" target="_blank" rel="external">https://leetcode.com/problems/next-permutation/</a><br><a id="more"></a><br>Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.  </p>
-<p>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).  </p>
-<p>The replacement must be in-place, do not allocate extra memory.  </p>
-<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.<br><code>1,2,3</code> → <code>1,3,2</code><br><code>3,2,1</code> → <code>1,2,3</code><br><code>1,1,5</code> → <code>1,5,1</code>  </p>
+<p><a href="https://leetcode.com/problems/decode-ways/" target="_blank" rel="external">https://leetcode.com/problems/decode-ways/</a><br><a id="more"></a><br>A message containing letters from A-Z is being encoded to numbers using the following mapping:</p>
+<p>‘A’ -&gt; 1<br>‘B’ -&gt; 2<br>…<br>‘Z’ -&gt; 26</p>
+<p>Given an encoded message containing digits, determine the total number of ways to decode it.</p>
+<p>EXAMPLE: Given encoded message 12, it could be decoded as AB (1 2) or L (12).<br>The number of ways decoding 12 is 2.</p>
 </blockquote>
-<p>The test case given in the question is not enough for us to understand this question. So I will use another example to explain this question.  </p>
-<p>Let <code>1,2,3,4,5</code> is the input array <code>nums</code>. It is easy to write down its next permutation which is <code>1,2,3,5,4</code>. What about <code>1,2,3,5,4</code>‘s next permutation? It’s <code>1,2,4,3,5</code>. And why?  </p>
-<p>The reason is that we have listed all possible permutations that <code>index[nums.length - 2]</code> greater than <code>index[nums.length - 1]</code>, we should think about condition that the last three numbers contain a non-lexicographically permutation of numbers. The smallest one is that <code>index[nums.length - 3]</code> is the second smallest number in the last three numbers, and numbers after that should be in an ascending order.  Why numbers should be in an ascending order? Because the question defines that this is a smallest condition.</p>
-<p>The following should be <code>1,2,4,5,3</code>, <code>1,2,5,3,4</code>, <code>1,2,5,4,3</code>, <code>1,3,2,4,5</code>, <code>1,3,2,5,4</code>, <code>1,3,4,2,5</code>, <code>1,3,4,5,2</code>, <code>1,3,5,2,4</code>, <code>1,3,5,4,2</code>, <code>1,4,2,3,5</code>, <code>1,4,2,5,3</code>, <code>1,4,3,2,5</code>, <code>1,4,3,5,2</code>, <code>1,4,5,2,3</code>, <code>1,4,5,3,2</code>, etc.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">nextPermutation</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span> || nums.length == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> index = -<span class="number">1</span>;</span><br><span class="line">        <span class="comment">// find the position where the value is smaller than its follower</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = nums.length - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] &gt; nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">                index = i - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// if index equals -1, this means the array is in an non-ascending,</span></span><br><span class="line">        <span class="comment">// order, it doesn't have next permutation, or it's next permutation</span></span><br><span class="line">        <span class="comment">// is the lowest possible order (ie, sorted in ascending order).  </span></span><br><span class="line">        <span class="keyword">if</span> (index == -<span class="number">1</span>) &#123;</span><br><span class="line">            reverse(nums, <span class="number">0</span>, nums.length - <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// find the position where the value is greater than the value stored</span></span><br><span class="line">        <span class="comment">// in nums[index]. Remember that index is the position where we need to</span></span><br><span class="line">        <span class="comment">// make some changes.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = nums.length - <span class="number">1</span>; i &gt; index; i--) &#123;</span><br><span class="line">            <span class="comment">// exchange </span></span><br><span class="line">            <span class="comment">// e.g. for 5,4,7,5,3,2; index = 1, i = 3</span></span><br><span class="line">            <span class="comment">// The result will be 5,5,7,4,3,2</span></span><br><span class="line">            <span class="comment">// Numbers after i = 3 (nums[i] = 5) is in an non-ascending order,</span></span><br><span class="line">            <span class="comment">// which means it's the greatest possible order. So the next   </span></span><br><span class="line">            <span class="comment">// permutation should start with the number smallest greater than 5. </span></span><br><span class="line">            <span class="comment">// And the number after index will also in an non-ascending order.</span></span><br><span class="line">            <span class="keyword">if</span>(nums[i] &gt; nums[index])&#123;</span><br><span class="line">                <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">                nums[i] = nums[index];</span><br><span class="line">                nums[index] = temp;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// once we get 5,5,7,4,3,2 from 5,4,7,5,3,2, we should reverse the order </span></span><br><span class="line">        <span class="comment">// from 7 to 2 to get the lowest possible order.</span></span><br><span class="line">        reverse(nums, index + <span class="number">1</span>, nums.length - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = start, j = end; i &lt; j; i++, j--) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[j];</span><br><span class="line">            nums[j] = nums[i];</span><br><span class="line">            nums[i] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Another version of solution which helps me a lot to understand this question.</p>
-<blockquote>
-<p><a href="https://leetcode.com/discuss/85045/20-line-1ms-in-place-java-code-with-expalantion" target="_blank" rel="external">https://leetcode.com/discuss/85045/20-line-1ms-in-place-java-code-with-expalantion</a>  </p>
-</blockquote>
+<p>First, we need a array with length eqauls s.length() + 1, since we need to add 0 before the given string just for convience. (p.s. we will do similar thing for DP problem in many cases)</p>
+<p>Let array <code>nums</code> store the value in string, array <code>result</code> store the decode ways for string.</p>
+<p>There are two kinds of conditions:  </p>
 <ol>
-<li>scan from right to left, find first pair where a[i] &gt; a[i-1]. note that a[i:] is non-ascending.  </li>
-<li>scan from right to left again, find first element a[j] where a[j] &gt; a[i-1]. since a[i:] is non-ascending, a[j] is the smallest number that &gt; a[i-1].  </li>
-<li>swap a[i-1] with a[j]. note that after swap, <strong>a[i:] remains non-ascending.</strong>  </li>
-<li>reverse a[i:] so that a[i:] becomes non-descending.  </li>
+<li>the value in <code>nums[i]</code> that you are dealing with is not 0</li>
+<li>the value in <code>nums[i]</code> that you are dealing with eqauls 0 </li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">nextPermutation</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> p = nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (p&gt;<span class="number">0</span> &amp;&amp; nums[p]&lt;=nums[p-<span class="number">1</span>]) &#123; --p; &#125;</span><br><span class="line">        <span class="keyword">if</span> (p == <span class="number">0</span>) &#123;  <span class="comment">// case like [3,2,1]</span></span><br><span class="line">            reverse(nums, <span class="number">0</span>, nums.length-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> q = nums.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (nums[q]&lt;=nums[p-<span class="number">1</span>]) &#123; --q; &#125;</span><br><span class="line">        <span class="keyword">int</span> temp = nums[p-<span class="number">1</span>]; nums[p-<span class="number">1</span>] = nums[q]; nums[q] = temp;</span><br><span class="line">        reverse(nums, p, nums.length-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> from, <span class="keyword">int</span> to)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (; from &lt; to; ++from, --to) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = a[from];</span><br><span class="line">            a[from] = a[to];</span><br><span class="line">            a[to] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>For the first condition, since <code>nums[i]</code> is not 0, it can convert to a meaningful charater by itself. So the total possible decode ways, <code>result[i]</code>, at least same as <code>result[i - 1]</code>.<br>Then we consider if it is able to combine with <code>nums[i - 1]</code>. If the value <code>nums[i - 1] * 10 + nums[i]</code> is greater than <code>10</code> and smaller than <code>26</code>, which means <code>nums[i - 1] * 10 + nums[i]</code> is a available value, <code>result[i]</code> is able to add <code>result[i - 1]</code>. Otherwise, it is not able to do that.</p>
+<p>For the second condition, since <code>nums[i]</code> is 0, it can not convert to a meaningful character by itself. It must combine with <code>nums[i - 1]</code>. So we could assume <code>nums[i - 1] * 10 + nums[i]</code> is the value we are dealing with. the <code>result[i]</code> can only possibly come from <code>result[i - 2]</code>. The following operation is same as condition 1.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[s.length() + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">// 在string前面加了一个0</span></span><br><span class="line">        nums[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        nums[<span class="number">1</span>] = s.charAt(<span class="number">0</span>) != <span class="string">'0'</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.charAt(i - <span class="number">1</span>) != <span class="string">'0'</span>) &#123;</span><br><span class="line">                nums[i] = nums[i - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> twoDigits = (s.charAt(i - <span class="number">2</span>) - <span class="string">'0'</span>) * <span class="number">10</span> + s.charAt(i - <span class="number">1</span>) - <span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">if</span> (twoDigits &gt;= <span class="number">10</span> &amp;&amp; twoDigits &lt;= <span class="number">26</span>) &#123;</span><br><span class="line">                nums[i] += nums[i - <span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[s.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -368,16 +363,12 @@ https://leetcode.com/problems/next-permutation/">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/20/CSS定位/" rel="next" title="CSS 定位">
-                <i class="fa fa-chevron-left"></i> CSS 定位
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/29/String Permutation II/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/19/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -404,8 +395,8 @@ https://leetcode.com/problems/next-permutation/">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/29/Next Permutation/"
-           data-title="" data-url="http://yoursite.com/2016/03/29/Next Permutation/">
+      <div class="ds-thread" data-thread-key="2016/03/18/Decode Ways/"
+           data-title="" data-url="http://yoursite.com/2016/03/18/Decode Ways/">
       </div>
     
   </div>
