@@ -275,8 +275,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/03/29/String Permutation II/" itemprop="url">
-                  String Permutation II
+                <a class="post-title-link" href="/2016/03/30/Restore-IP-Addresses/" itemprop="url">
+                  Restore IP Addresses
                 </a>
               
             
@@ -289,8 +289,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-29T21:48:40+08:00" content="2016-03-29">
-              2016-03-29
+            <time itemprop="dateCreated" datetime="2016-03-30T10:52:18+08:00" content="2016-03-30">
+              2016-03-30
             </time>
           </span>
 
@@ -319,8 +319,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/29/String Permutation II/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/29/String Permutation II/" itemprop="commentsCount"></span>
+                <a href="/2016/03/30/Restore-IP-Addresses/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/30/Restore-IP-Addresses/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -343,13 +343,14 @@
 
       
         
-          <h1 id="LintCode-Solution-String-Permutation-II"><a href="#LintCode-Solution-String-Permutation-II" class="headerlink" title="LintCode Solution: String Permutation II"></a>LintCode Solution: String Permutation II</h1><blockquote>
-<p><a href="http://www.lintcode.com/en/problem/string-permutation-ii/">http://www.lintcode.com/en/problem/string-permutation-ii/</a><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/29/String Permutation II/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
+          
+            <h1 id="LeetCode-Solution-Restore-IP-Addresses"><a href="#LeetCode-Solution-Restore-IP-Addresses" class="headerlink" title="LeetCode Solution: Restore IP Addresses"></a>LeetCode Solution: Restore IP Addresses</h1><blockquote>
+<p><a href="https://leetcode.com/problems/restore-ip-addresses/" target="_blank" rel="external">https://leetcode.com/problems/restore-ip-addresses/</a><br>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</p>
+<p>For example:<br>  Given <code>&quot;25525511135&quot;</code>,<br>  return <code>[&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]</code>. (Order does not matter)</p>
+</blockquote>
+<p>Keywords: <strong>ALL POSSIBLE</strong> gives us hint to use DFS</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span><br><span class="line">    * <span class="doctag">@param</span> s the IP string</span><br><span class="line">    * <span class="doctag">@return</span> All possible valid IP addresses</span><br><span class="line">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;String&gt; <span class="title">restoreIpAddresses</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Write your code here</span></span><br><span class="line">        <span class="keyword">char</span>[] str = s.toCharArray();</span><br><span class="line">        <span class="keyword">int</span> pointNums = <span class="number">0</span>;</span><br><span class="line">        ArrayList&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        String temp = <span class="keyword">new</span> String();</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() &lt; <span class="number">4</span> || s.length() &gt; <span class="number">12</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        restoreIpAddressesHelper(result, temp, str, <span class="number">0</span>, pointNums);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">restoreIpAddressesHelper</span><span class="params">(ArrayList&lt;String&gt; result,</span><br><span class="line">                                            String temp,</span><br><span class="line">                                            <span class="keyword">char</span>[] str,</span><br><span class="line">                                            <span class="keyword">int</span> pos,</span><br><span class="line">                                            <span class="keyword">int</span> pointNums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (temp.length() == str.length + <span class="number">3</span> &amp;&amp; pointNums == <span class="number">3</span>) &#123;</span><br><span class="line">            result.add(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (pointNums &gt; <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        StringBuffer addString = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = pos; i &lt; pos + <span class="number">3</span> &amp;&amp; i &lt; str.length; i++) &#123;</span><br><span class="line">            addString.append(str[i]);</span><br><span class="line">            <span class="keyword">if</span> (!isValidHelper(addString.toString())) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ( i == str.length - <span class="number">1</span>) &#123;</span><br><span class="line">                restoreIpAddressesHelper(result, temp + addString, </span><br><span class="line">                                            str, i + <span class="number">1</span>, pointNums);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                restoreIpAddressesHelper(result, temp + addString + <span class="string">"."</span>, </span><br><span class="line">                                            str, i + <span class="number">1</span>, pointNums + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>;     </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isValidHelper</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.charAt(<span class="number">0</span>) == <span class="string">'0'</span> &amp;&amp; s.length() != <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (Integer.valueOf(s) &gt; <span class="number">255</span> ) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
         
       
     </div>
@@ -465,6 +466,124 @@
 <p><a href="https://leetcode.com/problems/next-permutation/">https://leetcode.com/problems/next-permutation/</a><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/03/29/Next Permutation/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/29/String Permutation II/" itemprop="url">
+                  String Permutation II
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-29T21:48:40+08:00" content="2016-03-29">
+              2016-03-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/29/String Permutation II/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/29/String Permutation II/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="LintCode-Solution-String-Permutation-II"><a href="#LintCode-Solution-String-Permutation-II" class="headerlink" title="LintCode Solution: String Permutation II"></a>LintCode Solution: String Permutation II</h1><blockquote>
+<p><a href="http://www.lintcode.com/en/problem/string-permutation-ii/">http://www.lintcode.com/en/problem/string-permutation-ii/</a><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/29/String Permutation II/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -980,7 +1099,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
