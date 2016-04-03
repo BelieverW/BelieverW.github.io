@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Algorithm,Lintcode," />
+  <meta name="keywords" content="Leetcode,Algorithm," />
 
 
 
@@ -63,16 +63,16 @@
 
 
 
-<meta name="description" content="https://leetcode.com/problems/decode-ways/">
+<meta name="description" content="https://leetcode.com/problems/longest-substring-without-repeating-characters/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode Solution - Decode Ways">
-<meta property="og:url" content="http://believerw.github.io/2016/03/19/Decode Ways/index.html">
+<meta property="og:title" content="LeetCode Solution - Longest Substring Without Repeating Characters">
+<meta property="og:url" content="http://believerw.github.io/2016/04/03/Longest-Substring-Without-Repeating-Characters/index.html">
 <meta property="og:site_name" content="Entry-Level段子手的日常">
-<meta property="og:description" content="https://leetcode.com/problems/decode-ways/">
-<meta property="og:updated_time" content="2016-03-30T07:18:06.000Z">
+<meta property="og:description" content="https://leetcode.com/problems/longest-substring-without-repeating-characters/">
+<meta property="og:updated_time" content="2016-04-03T15:36:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode Solution - Decode Ways">
-<meta name="twitter:description" content="https://leetcode.com/problems/decode-ways/">
+<meta name="twitter:title" content="LeetCode Solution - Longest Substring Without Repeating Characters">
+<meta name="twitter:description" content="https://leetcode.com/problems/longest-substring-without-repeating-characters/">
 
 
 
@@ -131,7 +131,7 @@
       }
     }
   </style>
-  <title> LeetCode Solution - Decode Ways | Entry-Level段子手的日常 </title>
+  <title> LeetCode Solution - Longest Substring Without Repeating Characters | Entry-Level段子手的日常 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -279,7 +279,7 @@
             
             
               
-                LeetCode Solution - Decode Ways
+                LeetCode Solution - Longest Substring Without Repeating Characters
               
             
           </h1>
@@ -291,8 +291,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-19T23:27:07+08:00" content="2016-03-19">
-              2016-03-19
+            <time itemprop="dateCreated" datetime="2016-04-03T23:26:16+08:00" content="2016-04-03">
+              2016-04-03
             </time>
           </span>
 
@@ -321,8 +321,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/19/Decode Ways/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/19/Decode Ways/" itemprop="commentsCount"></span>
+                <a href="/2016/04/03/Longest-Substring-Without-Repeating-Characters/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/03/Longest-Substring-Without-Repeating-Characters/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,22 +345,11 @@
 
       
         <blockquote>
-<p><a href="https://leetcode.com/problems/decode-ways/" target="_blank" rel="external">https://leetcode.com/problems/decode-ways/</a><br><a id="more"></a><br>A message containing letters from A-Z is being encoded to numbers using the following mapping:</p>
-<p>‘A’ -&gt; 1<br>‘B’ -&gt; 2<br>…<br>‘Z’ -&gt; 26</p>
-<p>Given an encoded message containing digits, determine the total number of ways to decode it.</p>
-<p>EXAMPLE: Given encoded message 12, it could be decoded as AB (1 2) or L (12).<br>The number of ways decoding 12 is 2.</p>
+<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="external">https://leetcode.com/problems/longest-substring-without-repeating-characters/</a><br><a id="more"></a><br>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for “abcabcbb” is “abc”, which the length is 3. For “bbbbb” the longest substring is “b”, with the length of 1.</p>
 </blockquote>
-<p>First, we need a array with length eqauls s.length() + 1, since we need to add 0 before the given string just for convience. (p.s. we will do similar thing for DP problem in many cases)</p>
-<p>Let array <code>nums</code> store the value in string, array <code>result</code> store the decode ways for string.</p>
-<p>There are two kinds of conditions:  </p>
-<ol>
-<li>the value in <code>nums[i]</code> that you are dealing with is not 0</li>
-<li>the value in <code>nums[i]</code> that you are dealing with eqauls 0 </li>
-</ol>
-<p>For the first condition, since <code>nums[i]</code> is not 0, it can convert to a meaningful charater by itself. So the total possible decode ways, <code>result[i]</code>, at least same as <code>result[i - 1]</code>.<br>Then we consider if it is able to combine with <code>nums[i - 1]</code>. If the value <code>nums[i - 1] * 10 + nums[i]</code> is greater than <code>10</code> and smaller than <code>26</code>, which means <code>nums[i - 1] * 10 + nums[i]</code> is a available value, <code>result[i]</code> is able to add <code>result[i - 1]</code>. Otherwise, it is not able to do that.</p>
-<p>For the second condition, since <code>nums[i]</code> is 0, it can not convert to a meaningful character by itself. It must combine with <code>nums[i - 1]</code>. So we could assume <code>nums[i - 1] * 10 + nums[i]</code> is the value we are dealing with. the <code>result[i]</code> can only possibly come from <code>result[i - 2]</code>. The following operation is same as condition 1.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] nums = <span class="keyword">new</span> <span class="keyword">int</span>[s.length() + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">// 在string前面加了一个0</span></span><br><span class="line">        nums[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        nums[<span class="number">1</span>] = s.charAt(<span class="number">0</span>) != <span class="string">'0'</span> ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (s.charAt(i - <span class="number">1</span>) != <span class="string">'0'</span>) &#123;</span><br><span class="line">                nums[i] = nums[i - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> twoDigits = (s.charAt(i - <span class="number">2</span>) - <span class="string">'0'</span>) * <span class="number">10</span> + s.charAt(i - <span class="number">1</span>) - <span class="string">'0'</span>;</span><br><span class="line">            <span class="keyword">if</span> (twoDigits &gt;= <span class="number">10</span> &amp;&amp; twoDigits &lt;= <span class="number">26</span>) &#123;</span><br><span class="line">                nums[i] += nums[i - <span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums[s.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h1 id="Solution-1-Using-HashSet"><a href="#Solution-1-Using-HashSet" class="headerlink" title="Solution 1: Using HashSet"></a>Solution 1: Using HashSet</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Set&lt;Character&gt; set = <span class="keyword">new</span> HashSet&lt;Character&gt;();</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>, i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(j &lt; s.length())&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.contains(s.charAt(j)))&#123;</span><br><span class="line">                set.add(s.charAt(j++));</span><br><span class="line">                max = Math.max(max, set.size());</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                set.remove(s.charAt(i++));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Solution-2-Using-ASCII-Code"><a href="#Solution-2-Using-ASCII-Code" class="headerlink" title="Solution 2: Using ASCII Code"></a>Solution 2: Using ASCII Code</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">boolean</span>[] isUsed = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">256</span>];</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>, i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(j &lt; s.length())&#123;</span><br><span class="line">            <span class="keyword">if</span>(!isUsed[s.charAt(j)])&#123;</span><br><span class="line">                max = Math.max(max, j - i + <span class="number">1</span>);</span><br><span class="line">                isUsed[s.charAt(j++)] = <span class="keyword">true</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                isUsed[s.charAt(i++)] = <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Follow-Up-If-you-want-to-return-the-longest-substring-not-the-length-of-it"><a href="#Follow-Up-If-you-want-to-return-the-longest-substring-not-the-length-of-it" class="headerlink" title="Follow Up: If you want to return the longest substring not the length of it"></a>Follow Up: If you want to return the longest substring not the length of it</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Set&lt;Character&gt; set = <span class="keyword">new</span> HashSet&lt;Character&gt;();</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>, i = <span class="number">0</span>, j = <span class="number">0</span>, pos = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(j &lt; s.length())&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.contains(s.charAt(j)))&#123;</span><br><span class="line">                set.add(s.charAt(j++));</span><br><span class="line">                <span class="keyword">if</span> (max &lt; set.size()) &#123;</span><br><span class="line">                    max = set.size();</span><br><span class="line">                    pos = j - <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                set.remove(s.charAt(i++));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substring(pos + <span class="number">1</span> - max, pos + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -374,9 +363,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
+            <a href="/tags/Leetcode/" rel="tag">#Leetcode</a>
           
-            <a href="/tags/Lintcode/" rel="tag">#Lintcode</a>
+            <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
           
         </div>
       
@@ -385,17 +374,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/19/CSS-BOXMODEL/" rel="next" title="CSS Box Model">
-                <i class="fa fa-chevron-left"></i> CSS Box Model
+              <a href="/2016/04/03/Longest-Palindromic-Substring/" rel="next" title="LeetCode Solution - Longest Palindromic Substring">
+                <i class="fa fa-chevron-left"></i> LeetCode Solution - Longest Palindromic Substring
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/20/CSS定位/" rel="prev" title="CSS 定位">
-                CSS 定位 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -421,8 +406,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/19/Decode Ways/"
-           data-title="LeetCode Solution - Decode Ways" data-url="http://believerw.github.io/2016/03/19/Decode Ways/">
+      <div class="ds-thread" data-thread-key="2016/04/03/Longest-Substring-Without-Repeating-Characters/"
+           data-title="LeetCode Solution - Longest Substring Without Repeating Characters" data-url="http://believerw.github.io/2016/04/03/Longest-Substring-Without-Repeating-Characters/">
       </div>
     
   </div>
@@ -543,7 +528,7 @@
               
             
             
-              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution-1-Using-HashSet"><span class="nav-number">1.</span> <span class="nav-text">Solution 1: Using HashSet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution-2-Using-ASCII-Code"><span class="nav-number">2.</span> <span class="nav-text">Solution 2: Using ASCII Code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Follow-Up-If-you-want-to-return-the-longest-substring-not-the-length-of-it"><span class="nav-number">3.</span> <span class="nav-text">Follow Up: If you want to return the longest substring not the length of it</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
