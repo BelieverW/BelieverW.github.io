@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Algorithm,Leetcode," />
+  <meta name="keywords" content="Algorithm,LeetCode," />
 
 
 
@@ -63,18 +63,16 @@
 
 
 
-<meta name="description" content="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">
+<meta name="description" content="reference: http://www.cnblogs.com/maples7/p/4324844.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode Solution - Letter Combinations of a Phone Number">
-<meta property="og:url" content="http://believerw.github.io/2016/03/30/Letter-Combinations-of-a-Phone-Number/index.html">
+<meta property="og:title" content="Bit Manipulation">
+<meta property="og:url" content="http://believerw.github.io/2016/04/14/Bit-Manipulation/index.html">
 <meta property="og:site_name" content="Entry-Level段子手的日常">
-<meta property="og:description" content="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png">
-<meta property="og:updated_time" content="2016-03-30T07:44:29.000Z">
+<meta property="og:description" content="reference: http://www.cnblogs.com/maples7/p/4324844.html">
+<meta property="og:updated_time" content="2016-04-14T06:34:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode Solution - Letter Combinations of a Phone Number">
-<meta name="twitter:description" content="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">
-<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png">
+<meta name="twitter:title" content="Bit Manipulation">
+<meta name="twitter:description" content="reference: http://www.cnblogs.com/maples7/p/4324844.html">
 
 
 
@@ -133,7 +131,7 @@
       }
     }
   </style>
-  <title> LeetCode Solution - Letter Combinations of a Phone Number | Entry-Level段子手的日常 </title>
+  <title> Bit Manipulation | Entry-Level段子手的日常 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -281,7 +279,7 @@
             
             
               
-                LeetCode Solution - Letter Combinations of a Phone Number
+                Bit Manipulation
               
             
           </h1>
@@ -293,8 +291,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-30T14:18:08+08:00" content="2016-03-30">
-              2016-03-30
+            <time itemprop="dateCreated" datetime="2016-04-14T13:06:07+08:00" content="2016-04-14">
+              2016-04-14
             </time>
           </span>
 
@@ -323,8 +321,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/30/Letter-Combinations-of-a-Phone-Number/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/30/Letter-Combinations-of-a-Phone-Number/" itemprop="commentsCount"></span>
+                <a href="/2016/04/14/Bit-Manipulation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/14/Bit-Manipulation/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -347,42 +345,32 @@
 
       
         <blockquote>
-<p><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="external">https://leetcode.com/problems/letter-combinations-of-a-phone-number/</a><br><a id="more"></a><br>Given a digit string, return all possible letter combinations that the number could represent.</p>
-<p>A mapping of digit to letters (just like on the telephone buttons) is given below.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" alt="img">  </p>
-<p>Input:Digit string “23”<br>Output: [“ad”, “ae”, “af”, “bd”, “be”, “bf”, “cd”, “ce”, “cf”].</p>
-<p><strong>Note:</strong>   </p>
-<p>Although the above answer is in lexicographical order, your answer could be in any order you want.  </p>
+<p>reference: <a href="http://www.cnblogs.com/maples7/p/4324844.html" target="_blank" rel="external">http://www.cnblogs.com/maples7/p/4324844.html</a><br><a id="more"></a></p>
 </blockquote>
-<p>This is problem is easy except the use of HashMap.  </p>
-<p>Java has three kinds of Hashtalbe implementations. They are <code>HashTable</code>, <code>HashMap</code>, <code>HashSet</code>. <code>HashTable</code> is a thread safe implementation, but it is not efficient. For a single thread problem, we always use <code>HashMap</code>.  </p>
-<p><code>HashMap</code> have several important methods. They are <code>put(key, value)</code>, <code>get(key)</code>, <code>keySet()</code>, <code>values()</code>.</p>
-<h1 id="put-key-value"><a href="#put-key-value" class="headerlink" title="put(key, value)"></a><code>put(key, value)</code></h1><p><code>put(key value)</code> will insert the pair key-value into hashtable. For example:  </p>
-<pre><code>Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();
-map.put(&quot;one&quot;,&quot;xiaoming&quot;);      // it doesn&apos;t have add method since 
-map.put(&quot;two&quot;,&quot;xiaozhang&quot;);     // it does not implement Collection 
-map.put(&quot;three&quot;,&quot;xiaoli&quot;);      // interface
-map.put(&quot;four&quot;,&quot;xiaoliu&quot;);
-</code></pre><p><code>one</code>, <code>two</code>, <code>three</code>, <code>four</code> are keys and <code>xiaoming</code>, <code>xiaozhang</code>, <code>xiaoli</code>, <code>xiaoliu</code> are values.  </p>
-<h1 id="get-key"><a href="#get-key" class="headerlink" title="get(key)"></a><code>get(key)</code></h1><p><code>get(key)</code> will return value which combines with key. For example:  </p>
-<pre><code>System.out.println(map.get(&quot;one&quot;));
-System.out.println(map.get(&quot;two&quot;));
-System.out.println(map.get(&quot;three&quot;));
-System.out.println(map.get(&quot;four&quot;));  
-</code></pre><p>The output will be:  </p>
-<pre><code>xiaoming
-xiaozhang
-xiaoli
-xiaoliu
-</code></pre><h1 id="keySet"><a href="#keySet" class="headerlink" title="keySet()"></a><code>keySet()</code></h1><p><code>keySet()</code> will return all keys stored in hashtable.  </p>
-<pre><code>System.out.println(map.keySet());
-</code></pre><p>The output is:  </p>
-<pre><code>[four, one, two, three]
-</code></pre><h1 id="values"><a href="#values" class="headerlink" title="values()"></a><code>values()</code></h1><p><code>values()</code> will return all values stored in hashtable.  </p>
-<pre><code>System.out.println(map.value());
-</code></pre><p>The output is:  </p>
-<pre><code>[xiaolu, xiaoming, xiaozhang, xiaoli]
-</code></pre><h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 本代码由九章算法编辑提供。没有版权欢迎转发。</span><br><span class="line"> * - 九章算法致力于帮助更多中国人找到好的工作，教师团队均来自硅谷和国内的一线大公司在职工程师。</span><br><span class="line"> * - 现有的面试培训课程包括：九章算法班，系统设计班，BAT国内班</span><br><span class="line"> * - 更多详情请见官方网站：http://www.jiuzhang.com/</span><br><span class="line"> */</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;String&gt; <span class="title">letterCombinations</span><span class="params">(String digits)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;String&gt; result = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (digits == <span class="keyword">null</span> || digits.equals(<span class="string">""</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Map&lt;Character, <span class="keyword">char</span>[]&gt; map = <span class="keyword">new</span> HashMap&lt;Character, <span class="keyword">char</span>[]&gt;();</span><br><span class="line">        map.put(<span class="string">'0'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123;&#125;);</span><br><span class="line">        map.put(<span class="string">'1'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123;&#125;);</span><br><span class="line">        map.put(<span class="string">'2'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span> &#125;);</span><br><span class="line">        map.put(<span class="string">'3'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'d'</span>, <span class="string">'e'</span>, <span class="string">'f'</span> &#125;);</span><br><span class="line">        map.put(<span class="string">'4'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'g'</span>, <span class="string">'h'</span>, <span class="string">'i'</span> &#125;);</span><br><span class="line">        map.put(<span class="string">'5'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'j'</span>, <span class="string">'k'</span>, <span class="string">'l'</span> &#125;);</span><br><span class="line">        map.put(<span class="string">'6'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'m'</span>, <span class="string">'n'</span>, <span class="string">'o'</span> &#125;);</span><br><span class="line">        map.put(<span class="string">'7'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'p'</span>, <span class="string">'q'</span>, <span class="string">'r'</span>, <span class="string">'s'</span> &#125;);</span><br><span class="line">        map.put(<span class="string">'8'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'t'</span>, <span class="string">'u'</span>, <span class="string">'v'</span>&#125;);</span><br><span class="line">        map.put(<span class="string">'9'</span>, <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'w'</span>, <span class="string">'x'</span>, <span class="string">'y'</span>, <span class="string">'z'</span> &#125;);</span><br><span class="line"></span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        helper(map, digits, sb, result);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">helper</span><span class="params">(Map&lt;Character, <span class="keyword">char</span>[]&gt; map, String digits, </span><br><span class="line">        StringBuilder sb, ArrayList&lt;String&gt; result)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (sb.length() == digits.length()) &#123;</span><br><span class="line">            result.add(sb.toString());</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> c : map.get(digits.charAt(sb.length()))) &#123;</span><br><span class="line">            sb.append(c);</span><br><span class="line">            helper(map, digits, sb, result);</span><br><span class="line">            sb.deleteCharAt(sb.length() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Convert-a-decimal-number-into-binary-number-with-bit-manipulation"><a href="#Convert-a-decimal-number-into-binary-number-with-bit-manipulation" class="headerlink" title="Convert a decimal number into binary number with bit manipulation"></a>Convert a decimal number into binary number with bit manipulation</h1><ul>
+<li>for clause judges the each bit in a 16-bit binary number.  </li>
+<li>In the for loop, we use <code>&amp;</code> and <code>&lt;&lt;</code>. The effect of <code>&lt;&lt;</code> operation is like this: when <code>i = 15</code>, <code>(1 &lt;&lt; i)</code> will convert <code>0000000000000001</code> into <code>1000000000000000</code>; and when <code>i = 10</code>, the result will be <code>0000010000000000</code>. So the result of <code>num &amp;（1 &lt;&lt; i</code> is comparing the <code>ith</code> digit (<code>i</code> is from 0 to 15) in <code>num</code> with <code>(1 &lt;&lt; i)</code>. Only when <code>ith</code> digit in <code>num</code> is <code>1</code>, can <code>num &amp;（1 &lt;&lt; i）</code> be true.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">bitManipulation</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">    StringBuilder result = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">15</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> ((num &amp; (<span class="number">1</span> &lt;&lt; i)) != <span class="number">0</span>) &#123;</span><br><span class="line">            result.append(<span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result.append(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="LeetCode-Example-1-Number-of-1-Bits"><a href="#LeetCode-Example-1-Number-of-1-Bits" class="headerlink" title="LeetCode Example 1 - Number of 1 Bits"></a>LeetCode Example 1 - Number of 1 Bits</h2><blockquote>
+<p><a href="https://leetcode.com/problems/number-of-1-bits/" target="_blank" rel="external">https://leetcode.com/problems/number-of-1-bits/</a> </p>
+<p>Write a function that takes an unsigned integer and returns the number of <code>1</code> bits it has (also known as the Hamming weight).</p>
+<p>For example, the 32-bit integer <code>11</code> has binary representation <code>00000000000000000000000000001011</code>, so the function should return 3.</p>
+</blockquote>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution 1"></a>Solution 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// you need to treat n as an unsigned value</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((n &amp; (<span class="number">1</span> &lt;&lt; i)) != <span class="number">0</span>) &#123;</span><br><span class="line">                count ++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Solution-2-O-logN"><a href="#Solution-2-O-logN" class="headerlink" title="Solution 2 O(logN)"></a>Solution 2 O(logN)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// you need to treat n as an unsigned value</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            count += (n &amp; <span class="number">1</span>);</span><br><span class="line">            n &gt;&gt; <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The time complexity is O(logN), Since for each <code>&gt;&gt;</code> operation, <code>N</code> will be <code>N / 2</code>. </p>
+<h3 id="Solution-3-O-countOnes-N"><a href="#Solution-3-O-countOnes-N" class="headerlink" title="Solution 3 O(countOnes(N))"></a>Solution 3 O(countOnes(N))</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// you need to treat n as an unsigned value</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hammingWeight</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            count ++;</span><br><span class="line">            n &amp;= n - <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>For an arbitrary n, we can convert it to a binary number which is <code>xxx...xxx1000....000</code>. We do not take of how many <code>x</code> there are and how many <code>1</code>s in the sequence of <code>x</code>, we just focus on <code>1000...000</code>.</p>
+<p>Since n is <code>xxx...xxx1000....000</code>, then n - 1 must be <code>xxx...xxx0111....111</code> with the same numbers of digits after <code>xxx...xxx</code>. When we use <code>(n &amp; (n - 1))</code> operation, we will get <code>xxx...xxx0000....000</code>, which means we remove the last <code>1</code> in <code>n</code>.</p>
+<h2 id="LeetCode-Example-2-Reverse-Bits"><a href="#LeetCode-Example-2-Reverse-Bits" class="headerlink" title="LeetCode Example 2 - Reverse Bits"></a>LeetCode Example 2 - Reverse Bits</h2><blockquote>
+<p><a href="https://leetcode.com/problems/reverse-bits/" target="_blank" rel="external">https://leetcode.com/problems/reverse-bits/</a></p>
+<p>Reverse bits of a given 32 bits unsigned integer.</p>
+<p>For example, given input 43261596 (represented in binary as 00000010100101000001111010011100), return 964176192 (represented in binary as 00111001011110000010100101000000).</p>
+<p>Follow up:<br>If this function is called many times, how would you optimize it?</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// you need treat n as an unsigned value</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverseBits</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123;</span><br><span class="line">            result = (result &lt;&lt; <span class="number">1</span>) | (n &amp; <span class="number">1</span>);</span><br><span class="line">            n = n &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -398,7 +386,7 @@ xiaoliu
           
             <a href="/tags/Algorithm/" rel="tag">#Algorithm</a>
           
-            <a href="/tags/Leetcode/" rel="tag">#Leetcode</a>
+            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
           
         </div>
       
@@ -407,17 +395,13 @@ xiaoliu
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/30/Generate-Parentheses/" rel="next" title="LeetCode Solution - Generate Parentheses">
-                <i class="fa fa-chevron-left"></i> LeetCode Solution - Generate Parentheses
+              <a href="/2016/04/14/Single-Number/" rel="next" title="LeetCode Solution - Single Number">
+                <i class="fa fa-chevron-left"></i> LeetCode Solution - Single Number
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/03/Longest-Palindromic-Substring/" rel="prev" title="LeetCode Solution - Longest Palindromic Substring">
-                LeetCode Solution - Longest Palindromic Substring <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -443,8 +427,8 @@ xiaoliu
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/30/Letter-Combinations-of-a-Phone-Number/"
-           data-title="LeetCode Solution - Letter Combinations of a Phone Number" data-url="http://believerw.github.io/2016/03/30/Letter-Combinations-of-a-Phone-Number/">
+      <div class="ds-thread" data-thread-key="2016/04/14/Bit-Manipulation/"
+           data-title="Bit Manipulation" data-url="http://believerw.github.io/2016/04/14/Bit-Manipulation/">
       </div>
     
   </div>
@@ -565,7 +549,7 @@ xiaoliu
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#put-key-value"><span class="nav-number">1.</span> <span class="nav-text">put(key, value)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#get-key"><span class="nav-number">2.</span> <span class="nav-text">get(key)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#keySet"><span class="nav-number">3.</span> <span class="nav-text">keySet()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#values"><span class="nav-number">4.</span> <span class="nav-text">values()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">5.</span> <span class="nav-text">Solution</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Convert-a-decimal-number-into-binary-number-with-bit-manipulation"><span class="nav-number">1.</span> <span class="nav-text">Convert a decimal number into binary number with bit manipulation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-Example-1-Number-of-1-Bits"><span class="nav-number">1.1.</span> <span class="nav-text">LeetCode Example 1 - Number of 1 Bits</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">Solution 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-2-O-logN"><span class="nav-number">1.1.2.</span> <span class="nav-text">Solution 2 O(logN)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solution-3-O-countOnes-N"><span class="nav-number">1.1.3.</span> <span class="nav-text">Solution 3 O(countOnes(N))</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LeetCode-Example-2-Reverse-Bits"><span class="nav-number">1.2.</span> <span class="nav-text">LeetCode Example 2 - Reverse Bits</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
