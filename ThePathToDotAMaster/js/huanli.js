@@ -7,23 +7,43 @@ function chooseHeroLeft(thisHero) {
         .style("filter", "grayscale(0)");
     if (id != "hr_cmp_1") {
         d3.select("#hr_cmp_1")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_2") {
         d3.select("#hr_cmp_2")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_3") {
         d3.select("#hr_cmp_3")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_4") {
         d3.select("#hr_cmp_4")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_5") {
         d3.select("#hr_cmp_5")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     d3.select(".hero_show_left")
         .attr("src", gif_path);
@@ -42,23 +62,43 @@ function chooseHeroRight(thisHero) {
         .style("filter", "grayscale(0)");
     if (id != "hr_cmp_6") {
         d3.select("#hr_cmp_6")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_7") {
         d3.select("#hr_cmp_7")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_8") {
         d3.select("#hr_cmp_8")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_9") {
         d3.select("#hr_cmp_9")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     if (id != "hr_cmp_10") {
         d3.select("#hr_cmp_10")
-            .style("filter", "grayscale(100)");
+            .style("filter", "grayscale(100)")
+            .style("-webkit-filter", "grayscale(100)")
+            .style("-moz-filter", "grayscale(100)")
+            .style("-ms-filter", "grayscale(100)")
+            .style("-o-filter", "grayscale(100%)");
     }
     d3.select(".hero_show_right")
         .attr("src", gif_path);
