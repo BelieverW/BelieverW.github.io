@@ -191,7 +191,14 @@ $(document).ready(function(){
         }
     },
     function(){	
-        
+        $("#preview").hover(
+            function() {
+                
+            },
+            function() {
+                $("#preview").remove();    
+            }
+        )
     });
     
 	$(".pick_hero_icon").mousemove(function(e){
