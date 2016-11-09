@@ -156,8 +156,11 @@ $(document).ready(function(){
     pHeight= 0;
     x = 0;
     y = 0;
+    gifTop = 0;
+    gifLeft = 0;
     
 	$(".pick_hero_icon").hover(function(e){
+        $("#preview").remove();
         var windowWidth = $(window).width();
         if (windowWidth >= 900) {
             var $target=$(e.target);
@@ -174,7 +177,7 @@ $(document).ready(function(){
 		    $(".pick_group").append("<p id='preview'><img class='img_preview' src='"+ gif_path +"' alt='Image preview' width='120px' height='150'/>" + "</p>");
             var gifWidth = $(".img_preview").width();
             var gifHeight = $(".img_preview").height();
-            var gifTop, gifLeft;
+            
             if (x + gifWidth / 2 >= windowWidth - 10) {
                 gifLeft = windowWidth - gifWidth - 10;
             } else {
@@ -185,22 +188,10 @@ $(document).ready(function(){
 			 .css("top",gifTop + "px")
 			 .css("left",gifLeft + "px")
 			 .fadeIn("fast");
-            /*var xPos = e.pageX;
-            if (xPos + yOffset + $(".img_preview").width() >= windowWidth) {
-                $("#preview")
-			     .css("top",(e.pageY - xOffset) + "px")
-			     .css("left",(e.pageX - yOffset - $(".img_preview").width()) + "px")
-			     .fadeIn("fast");
-            } else {
-                $("#preview")
-			     .css("top",(e.pageY - xOffset) + "px")
-			     .css("left",(e.pageX + yOffset) + "px")
-			     .fadeIn("fast");
-            }*/
         }
     },
     function(){	
-		$("#preview").remove();
+        
     });
     
 	$(".pick_hero_icon").mousemove(function(e){
@@ -208,5 +199,10 @@ $(document).ready(function(){
             .css("top",gifTop + "px")
             .css("left",gifLeft + "px")
 			 .fadeIn("fast");
+        $("#preview").focus(hovered);
 	});
 });
+
+function hovered() {
+  console.log("Child element hovered!");
+}
