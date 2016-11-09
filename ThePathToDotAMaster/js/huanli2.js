@@ -150,12 +150,6 @@ $(document).ready(function(){
 		
     xOffset = 10;
     yOffset = 10;
-    pTop = 0;
-    pLeft = 0;
-    pWidth = 0;
-    pHeight= 0;
-    x = 0;
-    y = 0;
     
 	$(".pick_hero_icon").hover(function(e){
         var windowWidth = $(window).width();
@@ -164,28 +158,8 @@ $(document).ready(function(){
             var file_path = $target.attr("src").split("/");
             var file_name = file_path[file_path.length - 1].split(".")[0];
             var gif_path = "img/hero_gif/" + file_name + ".gif";
-            pos = $target.offset();
-            pTop = pos.top;
-            pLeft = pos.left;
-            pWidth = $target.width();
-            pHeight = $target.height();
-            x = pLeft + pWidth / 2;
-            y = pTop + pHeight / 2;
-		    $(".pick_group").append("<p id='preview'><img class='img_preview' src='"+ gif_path +"' alt='Image preview' width='120px' height='150'/>" + "</p>");
-            var gifWidth = $(".img_preview").width();
-            var gifHeight = $(".img_preview").height();
-            var gifTop, gifLeft;
-            if (x + gifWidth / 2 >= windowWidth - 10) {
-                gifLeft = windowWidth - gifWidth - 10;
-            } else {
-                gifLeft = x - gifWidth / 2;
-            }
-            gifTop = y - gifHeight / 2;
-            $("#preview")
-			 .css("top",gifTop + "px")
-			 .css("left",gifLeft + "px")
-			 .fadeIn("fast");
-            /*var xPos = e.pageX;
+		    $(".pick_group").append("<p id='preview'><img class='img_preview' src='"+ gif_path +"' alt='Image preview' width='130px'/>" + "</p>");								 
+            var xPos = e.pageX;
             if (xPos + yOffset + $(".img_preview").width() >= windowWidth) {
                 $("#preview")
 			     .css("top",(e.pageY - xOffset) + "px")
@@ -196,17 +170,27 @@ $(document).ready(function(){
 			     .css("top",(e.pageY - xOffset) + "px")
 			     .css("left",(e.pageX + yOffset) + "px")
 			     .fadeIn("fast");
-            }*/
+            }
         }
     },
-    function(){	
+	function(){	
 		$("#preview").remove();
-    });
-    
+    });	
 	$(".pick_hero_icon").mousemove(function(e){
-        $("#preview")
-            .css("top",gifTop + "px")
-            .css("left",gifLeft + "px")
-			 .fadeIn("fast");
+        var windowWidth = $(window).width();
+        if (windowWidth >= 900) {
+            var xPos = e.pageX;
+            if (xPos + yOffset + $(".img_preview").width() >= windowWidth) {
+                $("#preview")
+			     .css("top",(e.pageY - xOffset) + "px")
+			     .css("left",(e.pageX - yOffset - $(".img_preview").width()) + "px")
+			     .fadeIn("fast");
+            } else {
+                $("#preview")
+			     .css("top",(e.pageY - xOffset) + "px")
+			     .css("left",(e.pageX + yOffset) + "px")
+			     .fadeIn("fast");
+            }
+        }
 	});
 });
