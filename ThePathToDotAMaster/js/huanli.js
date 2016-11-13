@@ -125,7 +125,7 @@ function chooseHeroRight(thisHero) {
 }
 
 $(document).ready(function(){
-		
+    	
     xOffset = 10;
     yOffset = 10;
     pTop = 0;
@@ -136,6 +136,17 @@ $(document).ready(function(){
     y = 0;
     gifTop = 0;
     gifLeft = 0;
+    
+    var colorScale = d3.scale.linear()
+                        .domain([1, 10])
+                        .range(["lime", "red"]);
+    for (var i = 1; i <= 10; i++) {
+        d3.select("#selected_hero_" + i)
+            .style("box-shadow", function() {
+                return "0px 0px 10px 3px" + colorScale(i);
+        })
+    }
+    
     
 	$(".pick_hero_icon").hover(function(e){
         $("#preview").remove();
@@ -156,9 +167,9 @@ $(document).ready(function(){
                 y = pTop + pHeight / 2;
                 var hero_name = file_name.split('-').join(' ');
                 if (file_name == "underlord") {
-                    $(".pick_group").append("<div id='preview'><img class='img_preview' src='"+ $target.attr("src") +"' alt='Image preview' width='120px' height='150' onclick='chooseThisHero(this)'/>" + "<div id='hero_name'>" + hero_name + "</div>" + "</div>");
+                    $(".pick_group").append("<div id='preview'><img class='img_preview' src='"+ $target.attr("src") +"' alt='Image preview' width='120px' height='150' onclick='chooseThisHero(this)'/>" + "<div id='hero_name' class='special-txt hero_name_small'>" + hero_name + "</div>" + "</div>");
                 } else {
-		            $(".pick_group").append("<div id='preview'><img class='img_preview' src='"+ gif_path +"' alt='Image preview' width='120px' height='150' onclick='chooseThisHero(this)'/>" + "<div id='hero_name'>" + hero_name + "</div>" + "</div>");
+		            $(".pick_group").append("<div id='preview'><img class='img_preview' src='"+ gif_path +"' alt='Image preview' width='120px' height='150' onclick='chooseThisHero(this)'/>" + "<div id='hero_name' class='special-txt hero_name_small'>" + hero_name + "</div>" + "</div>");
                 }
                 var gifWidth = $(".img_preview").width();
                 var gifHeight = $(".img_preview").height();
@@ -224,6 +235,7 @@ function chooseThisHero(thisHero) {
             .css("filter", "grayscale(100%)");
         d3.select("#" + gif_name).attr("select", "true");
     }
+    check_if_can_compare()
 }
 
 function chooseThisHeroMin(thisHero) {
@@ -253,6 +265,7 @@ function chooseThisHeroMin(thisHero) {
             .css("filter", "grayscale(100%)");
         d3.select("#" + gif_name).attr("select", "true");
     }
+    check_if_can_compare()
 }
 
 function removeThisHero(thisHero) {
@@ -273,6 +286,27 @@ function removeThisHero(thisHero) {
         }
     }
     thisHero.src = "img/hero_pic/empty.png";
+    check_if_can_compare()
+}
+
+function compare(thisBtn) {
+    $("#preview").remove();
+}
+
+function check_if_can_compare() {
+    var emptyNum = 0;
+    for (var i = 1; i <= 10; i++) {
+        if ($("#selected_hero_" + i).attr('src') == "img/hero_pic/empty.png") {
+            emptyNum++;
+        }
+    }
+    if (emptyNum != 0) {
+        d3.select(".compare_button")
+            .attr("disabled", "disabled");
+    } else {
+        d3.select(".compare_button")
+            .attr("disabled", null);
+    }
 }
 
 
