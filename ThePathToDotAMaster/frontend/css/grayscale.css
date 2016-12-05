@@ -659,8 +659,17 @@ svg {
 #attribute-compare-chart {
     color:white;
 }
+.img-author {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.author-text {
+    color: white;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.position {
+    color: white;
+}
 
-
-/*yuehua*/
-
-/*xueyang*/
