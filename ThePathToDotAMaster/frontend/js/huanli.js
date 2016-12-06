@@ -90,13 +90,13 @@ function chooseHeroLeft(thisHero) {
         $("#initial-left").barfiller({});
         $("#disable-left").barfiller({});
         $("#healing-left").barfiller({});
+        chart1.load({columns: [['WinRate(TOTAL)', winRate["winrate"][img_name]]]});
         var thisHeroIndex = thisHero.id.split("_")[2] - 1;
         chart3.load({columns: [['Combo', leftCombo[thisHeroIndex].toFixed(2)]]});
         chart4.load({columns: [['Anti', leftAnti[thisHeroIndex].toFixed(2)]]});
         var antiHero_path = $('.hero_show_right').attr('src').split("/");
         var antiHero = antiHero_path[antiHero_path.length - 1].split(".")[0];
         chart2.load({columns: [['WinRate(CMP)', herohero[img_name][antiHero]]]});
-        chart1.load({columns: [['WinRate(TOTAL)', winRate["winrate"][img_name]]]});
         chart6.load({columns: [['WinRate(CMP)', herohero[antiHero][img_name]]]});
     }
 }
@@ -191,13 +191,13 @@ function chooseHeroRight(thisHero) {
         $("#initial-right").barfiller({});
         $("#disable-right").barfiller({});
         $("#healing-right").barfiller({});
+        chart5.load({columns: [['WinRate(TOTAL)', winRate["winrate"][img_name]]]});
         var thisHeroIndex = thisHero.id.split("_")[2] - 1 - 5;
         chart7.load({columns: [['Combo', rightCombo[thisHeroIndex].toFixed(2)]]});
         chart8.load({columns: [['Anti', rightAnti[thisHeroIndex].toFixed(2)]]});
         var antiHero_path = $('.hero_show_left').attr('src').split("/");
         var antiHero = antiHero_path[antiHero_path.length - 1].split(".")[0];
         chart6.load({columns: [['WinRate(CMP)', herohero[img_name][antiHero]]]});
-        chart5.load({columns: [['WinRate(TOTAL)', winRate["winrate"][img_name]]]});
         chart2.load({columns: [['WinRate(CMP)', herohero[antiHero][img_name]]]});
     }
 
