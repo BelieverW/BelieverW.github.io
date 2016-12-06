@@ -9,10 +9,10 @@ var hero_attributes = {
     "dps": 6.28,
     "push": 4.84,
     "nuke": 2,
-    "durable": 9,
-    "initial": 2,
-    "disable": 4,
-    "healing": 8
+    "durable": 8.97,
+    "initial": 1.95,
+    "disable": 3.97,
+    "healing": 7.95
   },
   "alchemist": {
     "midlane": 7.75,
@@ -23,10 +23,10 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 7.82,
     "push": 6.41,
-    "nuke": 6,
-    "durable": 9,
-    "initial": 4,
-    "disable": 6,
+    "nuke": 5.96,
+    "durable": 8.98,
+    "initial": 3.98,
+    "disable": 6.01,
     "healing": 2
   },
   "ancient-apparition": {
@@ -38,11 +38,11 @@ var hero_attributes = {
     "lane": 4,
     "dps": 5.55,
     "push": 2.04,
-    "nuke": 4,
-    "durable": 1.5,
-    "initial": 2,
-    "disable": 3,
-    "healing": 2.5
+    "nuke": 3.97,
+    "durable": 1.53,
+    "initial": 1.96,
+    "disable": 2.96,
+    "healing": 2.54
   },
   "anti-mage": {
     "midlane": 0,
@@ -53,11 +53,11 @@ var hero_attributes = {
     "lane": 5,
     "dps": 6.2,
     "push": 6.55,
-    "nuke": 9,
-    "durable": 9,
-    "initial": 8,
-    "disable": 3,
-    "healing": 0
+    "nuke": 9.02,
+    "durable": 9.05,
+    "initial": 7.95,
+    "disable": 2.96,
+    "healing": 0.02
   },
   "arc-warden": {
     "midlane": 9.08,
@@ -68,11 +68,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 7.62,
     "push": 5.51,
-    "nuke": 8,
-    "durable": 6,
-    "initial": 3,
-    "disable": 4,
-    "healing": 3.5
+    "nuke": 8.03,
+    "durable": 6.04,
+    "initial": 2.96,
+    "disable": 4.04,
+    "healing": 3.48
   },
   "axe": {
     "midlane": 0,
@@ -83,11 +83,11 @@ var hero_attributes = {
     "lane": 8.2,
     "dps": 7.72,
     "push": 3.35,
-    "nuke": 5.5,
-    "durable": 7.5,
-    "initial": 8.5,
-    "disable": 8,
-    "healing": 0
+    "nuke": 5.51,
+    "durable": 7.54,
+    "initial": 8.45,
+    "disable": 8.03,
+    "healing": 0.05
   },
   "bane": {
     "midlane": 8.55,
@@ -98,11 +98,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 4.17,
     "push": 2.43,
-    "nuke": 3,
-    "durable": 3,
-    "initial": 7,
-    "disable": 6,
-    "healing": 2.5
+    "nuke": 2.98,
+    "durable": 3.05,
+    "initial": 6.97,
+    "disable": 6.05,
+    "healing": 2.55
   },
   "batrider": {
     "midlane": 8.72,
@@ -113,11 +113,11 @@ var hero_attributes = {
     "lane": 8,
     "dps": 5.74,
     "push": 1.99,
-    "nuke": 4.5,
-    "durable": 6.5,
-    "initial": 9.5,
+    "nuke": 4.55,
+    "durable": 6.49,
+    "initial": 9.54,
     "disable": 9,
-    "healing": 0
+    "healing": -0.04
   },
   "beastmaster": {
     "midlane": 7.32,
@@ -128,11 +128,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 4.72,
     "push": 5.34,
-    "nuke": 5.5,
-    "durable": 6,
-    "initial": 9,
-    "disable": 8,
-    "healing": 0
+    "nuke": 5.45,
+    "durable": 5.96,
+    "initial": 9.02,
+    "disable": 8.03,
+    "healing": -0.05
   },
   "bloodseeker": {
     "midlane": 4.96,
@@ -143,11 +143,11 @@ var hero_attributes = {
     "lane": 4.5,
     "dps": 7.41,
     "push": 5.17,
-    "nuke": 6,
-    "durable": 7,
-    "initial": 7.5,
-    "disable": 3,
-    "healing": 3.5
+    "nuke": 5.99,
+    "durable": 7.05,
+    "initial": 7.51,
+    "disable": 2.98,
+    "healing": 3.51
   },
   "bounty-hunter": {
     "midlane": 7.41,
@@ -158,10 +158,10 @@ var hero_attributes = {
     "lane": 5.5,
     "dps": 4.64,
     "push": 2.8,
-    "nuke": 7,
-    "durable": 4,
-    "initial": 3,
-    "disable": 7.5,
+    "nuke": 6.99,
+    "durable": 3.96,
+    "initial": 3.03,
+    "disable": 7.54,
     "healing": 3.5
   },
   "brewmaster": {
@@ -173,11 +173,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 5.64,
     "push": 4.26,
-    "nuke": 4,
-    "durable": 9,
-    "initial": 8,
-    "disable": 6.5,
-    "healing": 0
+    "nuke": 4.02,
+    "durable": 8.96,
+    "initial": 8.05,
+    "disable": 6.51,
+    "healing": -0.02
   },
   "bristleback": {
     "midlane": 0,
@@ -189,10 +189,10 @@ var hero_attributes = {
     "dps": 7.94,
     "push": 4.6,
     "nuke": 3,
-    "durable": 9.5,
-    "initial": 3,
-    "disable": 7.5,
-    "healing": 1.5
+    "durable": 9.47,
+    "initial": 3.04,
+    "disable": 7.53,
+    "healing": 1.47
   },
   "broodmother": {
     "midlane": 11.08,
@@ -203,11 +203,11 @@ var hero_attributes = {
     "lane": 9.5,
     "dps": 4.53,
     "push": 5.72,
-    "nuke": 4.5,
-    "durable": 6,
-    "initial": 3,
-    "disable": 7,
-    "healing": 0
+    "nuke": 4.51,
+    "durable": 6.02,
+    "initial": 3.04,
+    "disable": 6.96,
+    "healing": 0.03
   },
   "centaur-warrunner": {
     "midlane": 0,
@@ -218,11 +218,11 @@ var hero_attributes = {
     "lane": 7.3,
     "dps": 6.94,
     "push": 5.73,
-    "nuke": 6,
-    "durable": 8,
-    "initial": 8.5,
-    "disable": 8.5,
-    "healing": 4.5
+    "nuke": 6.03,
+    "durable": 8.03,
+    "initial": 8.55,
+    "disable": 8.46,
+    "healing": 4.52
   },
   "chaos-knight": {
     "midlane": 6.7,
@@ -233,11 +233,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 6.67,
     "push": 5.83,
-    "nuke": 8.5,
-    "durable": 8,
-    "initial": 7.5,
-    "disable": 9,
-    "healing": 0
+    "nuke": 8.47,
+    "durable": 8.04,
+    "initial": 7.52,
+    "disable": 8.98,
+    "healing": -0.04
   },
   "chen": {
     "midlane": 0,
@@ -248,11 +248,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 2.55,
     "push": 4.62,
-    "nuke": 2,
-    "durable": 3.5,
-    "initial": 3.5,
-    "disable": 6,
-    "healing": 8.5
+    "nuke": 2.03,
+    "durable": 3.49,
+    "initial": 3.46,
+    "disable": 5.97,
+    "healing": 8.54
   },
   "clinkz": {
     "midlane": 8.63,
@@ -263,11 +263,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 6.77,
     "push": 6.55,
-    "nuke": 8.5,
-    "durable": 4.5,
-    "initial": 2,
-    "disable": 2,
-    "healing": 0
+    "nuke": 8.52,
+    "durable": 4.54,
+    "initial": 1.96,
+    "disable": 1.97,
+    "healing": 0.03
   },
   "crystal-maiden": {
     "midlane": 0,
@@ -278,11 +278,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 5.46,
     "push": 2.04,
-    "nuke": 2.5,
-    "durable": 2,
-    "initial": 5,
+    "nuke": 2.51,
+    "durable": 1.97,
+    "initial": 5.02,
     "disable": 7.5,
-    "healing": 3.5
+    "healing": 3.49
   },
   "dark-seer": {
     "midlane": 0,
@@ -294,10 +294,10 @@ var hero_attributes = {
     "dps": 6.13,
     "push": 2.59,
     "nuke": 4.5,
-    "durable": 7.5,
-    "initial": 8.5,
-    "disable": 3.5,
-    "healing": 5.5
+    "durable": 7.48,
+    "initial": 8.54,
+    "disable": 3.51,
+    "healing": 5.53
   },
   "dazzle": {
     "midlane": 7.83,
@@ -308,11 +308,11 @@ var hero_attributes = {
     "lane": 8,
     "dps": 1.83,
     "push": 2.98,
-    "nuke": 1,
-    "durable": 4,
-    "initial": 3,
-    "disable": 5,
-    "healing": 8.5
+    "nuke": 1.03,
+    "durable": 4.01,
+    "initial": 3.02,
+    "disable": 5.03,
+    "healing": 8.53
   },
   "death-prophet": {
     "midlane": 7.52,
@@ -323,11 +323,11 @@ var hero_attributes = {
     "lane": 7.2,
     "dps": 6.96,
     "push": 5.94,
-    "nuke": 6.5,
+    "nuke": 6.49,
     "durable": 7.5,
     "initial": 3,
-    "disable": 5.5,
-    "healing": 1.5
+    "disable": 5.47,
+    "healing": 1.47
   },
   "disruptor": {
     "midlane": 6.58,
@@ -339,10 +339,10 @@ var hero_attributes = {
     "dps": 4.83,
     "push": 2.36,
     "nuke": 4,
-    "durable": 2,
-    "initial": 7.5,
-    "disable": 8,
-    "healing": 2.5
+    "durable": 2.02,
+    "initial": 7.48,
+    "disable": 7.97,
+    "healing": 2.46
   },
   "doom": {
     "midlane": 0,
@@ -353,11 +353,11 @@ var hero_attributes = {
     "lane": 5.5,
     "dps": 5.49,
     "push": 3.56,
-    "nuke": 7,
-    "durable": 7,
-    "initial": 8,
-    "disable": 4.5,
-    "healing": 1
+    "nuke": 7.02,
+    "durable": 7.04,
+    "initial": 7.95,
+    "disable": 4.45,
+    "healing": 0.97
   },
   "dragon-knight": {
     "midlane": 8.24,
@@ -368,11 +368,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 6.47,
     "push": 6.1,
-    "nuke": 5,
-    "durable": 9,
-    "initial": 6.5,
-    "disable": 7.5,
-    "healing": 0
+    "nuke": 5.03,
+    "durable": 9.03,
+    "initial": 6.51,
+    "disable": 7.46,
+    "healing": -0.05
   },
   "drow-ranger": {
     "midlane": 8.19,
@@ -383,11 +383,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 5.78,
     "push": 6.84,
-    "nuke": 7,
-    "durable": 5,
-    "initial": 4,
+    "nuke": 6.96,
+    "durable": 4.97,
+    "initial": 4.03,
     "disable": 7,
-    "healing": 0
+    "healing": -0.03
   },
   "earth-spirit": {
     "midlane": 7.93,
@@ -398,10 +398,10 @@ var hero_attributes = {
     "lane": 5.5,
     "dps": 4.39,
     "push": 1.38,
-    "nuke": 6,
-    "durable": 4,
+    "nuke": 5.97,
+    "durable": 3.98,
     "initial": 7.5,
-    "disable": 7,
+    "disable": 6.97,
     "healing": 2.5
   },
   "earthshaker": {
@@ -413,10 +413,10 @@ var hero_attributes = {
     "lane": 4,
     "dps": 6.13,
     "push": 2.58,
-    "nuke": 7.5,
-    "durable": 3,
-    "initial": 8.5,
-    "disable": 8.5,
+    "nuke": 7.49,
+    "durable": 2.98,
+    "initial": 8.47,
+    "disable": 8.47,
     "healing": 1
   },
   "elder-titan": {
@@ -428,11 +428,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 6.01,
     "push": 2.62,
-    "nuke": 6.5,
+    "nuke": 6.46,
     "durable": 5,
-    "initial": 8,
-    "disable": 7,
-    "healing": 2.5
+    "initial": 7.99,
+    "disable": 6.95,
+    "healing": 2.51
   },
   "ember-spirit": {
     "midlane": 7.98,
@@ -443,11 +443,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 7.69,
     "push": 4.67,
-    "nuke": 6.5,
+    "nuke": 6.49,
     "durable": 7.5,
     "initial": 6.5,
-    "disable": 8,
-    "healing": 1
+    "disable": 8.04,
+    "healing": 0.97
   },
   "enchantress": {
     "midlane": 7.79,
@@ -458,11 +458,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 5.68,
     "push": 4.04,
-    "nuke": 7.5,
-    "durable": 6,
-    "initial": 3,
-    "disable": 4.5,
-    "healing": 3.5
+    "nuke": 7.48,
+    "durable": 6.03,
+    "initial": 2.95,
+    "disable": 4.52,
+    "healing": 3.49
   },
   "enigma": {
     "midlane": 0,
@@ -473,11 +473,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 6.37,
     "push": 4.52,
-    "nuke": 4,
-    "durable": 4.5,
-    "initial": 9,
-    "disable": 8,
-    "healing": 5.5
+    "nuke": 3.98,
+    "durable": 4.51,
+    "initial": 8.96,
+    "disable": 7.99,
+    "healing": 5.51
   },
   "faceless-void": {
     "midlane": 0,
@@ -488,11 +488,11 @@ var hero_attributes = {
     "lane": 8.2,
     "dps": 5.34,
     "push": 5.24,
-    "nuke": 7,
-    "durable": 8.5,
-    "initial": 9,
-    "disable": 7,
-    "healing": 1
+    "nuke": 6.95,
+    "durable": 8.47,
+    "initial": 9.02,
+    "disable": 7.01,
+    "healing": 1.04
   },
   "natures-prophet": {
     "midlane": 0,
@@ -503,11 +503,11 @@ var hero_attributes = {
     "lane": 7.7,
     "dps": 6.45,
     "push": 6.71,
-    "nuke": 4,
-    "durable": 4.5,
-    "initial": 3,
-    "disable": 9,
-    "healing": 3.5
+    "nuke": 4.01,
+    "durable": 4.52,
+    "initial": 2.99,
+    "disable": 9.05,
+    "healing": 3.55
   },
   "gyrocopter": {
     "midlane": 7.61,
@@ -518,11 +518,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 7.32,
     "push": 4.92,
-    "nuke": 4,
-    "durable": 7.5,
-    "initial": 7.5,
-    "disable": 6,
-    "healing": 1
+    "nuke": 4.03,
+    "durable": 7.46,
+    "initial": 7.53,
+    "disable": 6.05,
+    "healing": 1.04
   },
   "huskar": {
     "midlane": 9.77,
@@ -533,11 +533,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 7.69,
     "push": 5.37,
-    "nuke": 7,
-    "durable": 9,
-    "initial": 3,
-    "disable": 7.5,
-    "healing": 3.5
+    "nuke": 6.98,
+    "durable": 9.03,
+    "initial": 3.03,
+    "disable": 7.53,
+    "healing": 3.52
   },
   "invoker": {
     "midlane": 9.09,
@@ -548,11 +548,11 @@ var hero_attributes = {
     "lane": 8,
     "dps": 7.65,
     "push": 5.83,
-    "nuke": 8.5,
-    "durable": 7,
-    "initial": 8,
-    "disable": 9,
-    "healing": 2
+    "nuke": 8.51,
+    "durable": 7.04,
+    "initial": 7.99,
+    "disable": 8.96,
+    "healing": 1.97
   },
   "jakiro": {
     "midlane": 7.38,
@@ -563,11 +563,11 @@ var hero_attributes = {
     "lane": 8,
     "dps": 5.57,
     "push": 5.03,
-    "nuke": 5.5,
-    "durable": 6,
-    "initial": 4,
-    "disable": 6,
-    "healing": 2.5
+    "nuke": 5.48,
+    "durable": 6.04,
+    "initial": 3.97,
+    "disable": 5.97,
+    "healing": 2.47
   },
   "juggernaut": {
     "midlane": 6.28,
@@ -578,11 +578,11 @@ var hero_attributes = {
     "lane": 5.5,
     "dps": 7.37,
     "push": 6.32,
-    "nuke": 7.5,
-    "durable": 7.5,
-    "initial": 3,
+    "nuke": 7.52,
+    "durable": 7.48,
+    "initial": 3.03,
     "disable": 4,
-    "healing": 5.5
+    "healing": 5.48
   },
   "keeper-of-the-light": {
     "midlane": 8.28,
@@ -593,11 +593,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 4.73,
     "push": 2.45,
-    "nuke": 3,
-    "durable": 4,
-    "initial": 3,
-    "disable": 6,
-    "healing": 8
+    "nuke": 2.97,
+    "durable": 4.03,
+    "initial": 3.03,
+    "disable": 6.01,
+    "healing": 8.02
   },
   "kunkka": {
     "midlane": 6.57,
@@ -610,9 +610,9 @@ var hero_attributes = {
     "push": 3.88,
     "nuke": 5,
     "durable": 7.5,
-    "initial": 7.5,
-    "disable": 8.5,
-    "healing": 2.5
+    "initial": 7.47,
+    "disable": 8.47,
+    "healing": 2.47
   },
   "legion-commander": {
     "midlane": 5.94,
@@ -623,11 +623,11 @@ var hero_attributes = {
     "lane": 5.5,
     "dps": 6.79,
     "push": 6.09,
-    "nuke": 7,
+    "nuke": 7.01,
     "durable": 7,
-    "initial": 9,
-    "disable": 4,
-    "healing": 2.5
+    "initial": 9.03,
+    "disable": 4.04,
+    "healing": 2.52
   },
   "leshrac": {
     "midlane": 9.05,
@@ -638,11 +638,11 @@ var hero_attributes = {
     "lane": 6.7,
     "dps": 6.48,
     "push": 5.24,
-    "nuke": 5.5,
-    "durable": 6.5,
-    "initial": 5.5,
+    "nuke": 5.52,
+    "durable": 6.53,
+    "initial": 5.55,
     "disable": 7.5,
-    "healing": 2
+    "healing": 2.02
   },
   "lich": {
     "midlane": 8.13,
@@ -653,11 +653,11 @@ var hero_attributes = {
     "lane": 9,
     "dps": 6.47,
     "push": 2.64,
-    "nuke": 3.5,
-    "durable": 5.5,
-    "initial": 4,
-    "disable": 6.5,
-    "healing": 3.5
+    "nuke": 3.54,
+    "durable": 5.51,
+    "initial": 4.03,
+    "disable": 6.54,
+    "healing": 3.52
   },
   "lifestealer": {
     "midlane": 0,
@@ -668,10 +668,10 @@ var hero_attributes = {
     "lane": 7,
     "dps": 7.15,
     "push": 5.51,
-    "nuke": 7.5,
-    "durable": 8,
-    "initial": 6,
-    "disable": 6.5,
+    "nuke": 7.51,
+    "durable": 7.96,
+    "initial": 5.98,
+    "disable": 6.52,
     "healing": 2
   },
   "lina": {
@@ -683,11 +683,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 6.64,
     "push": 4.33,
-    "nuke": 8.5,
-    "durable": 5,
-    "initial": 6.5,
-    "disable": 7,
-    "healing": 1.5
+    "nuke": 8.52,
+    "durable": 5.02,
+    "initial": 6.51,
+    "disable": 6.98,
+    "healing": 1.49
   },
   "lion": {
     "midlane": 5.99,
@@ -698,11 +698,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 3.95,
     "push": 1.84,
-    "nuke": 6.5,
-    "durable": 2,
-    "initial": 9,
+    "nuke": 6.47,
+    "durable": 1.99,
+    "initial": 9.04,
     "disable": 9,
-    "healing": 1.5
+    "healing": 1.51
   },
   "lone-druid": {
     "midlane": 11.92,
@@ -713,10 +713,10 @@ var hero_attributes = {
     "lane": 7.8,
     "dps": 4.96,
     "push": 6.25,
-    "nuke": 4,
-    "durable": 9,
-    "initial": 3,
-    "disable": 7.5,
+    "nuke": 4.04,
+    "durable": 8.98,
+    "initial": 3.01,
+    "disable": 7.49,
     "healing": 0
   },
   "luna": {
@@ -728,11 +728,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 7.68,
     "push": 7.06,
-    "nuke": 7.5,
-    "durable": 7,
-    "initial": 2,
-    "disable": 4,
-    "healing": 0
+    "nuke": 7.48,
+    "durable": 7.03,
+    "initial": 2.01,
+    "disable": 3.99,
+    "healing": -0.03
   },
   "lycan": {
     "midlane": 0,
@@ -743,11 +743,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 5.15,
     "push": 6.59,
-    "nuke": 7.5,
-    "durable": 9,
-    "initial": 3,
-    "disable": 3,
-    "healing": 1
+    "nuke": 7.53,
+    "durable": 9.02,
+    "initial": 3.04,
+    "disable": 3.01,
+    "healing": 1.04
   },
   "magnus": {
     "midlane": 5.18,
@@ -758,11 +758,11 @@ var hero_attributes = {
     "lane": 5,
     "dps": 5.4,
     "push": 3.68,
-    "nuke": 3.5,
-    "durable": 5,
-    "initial": 8.5,
-    "disable": 5,
-    "healing": 0
+    "nuke": 3.53,
+    "durable": 5.02,
+    "initial": 8.49,
+    "disable": 5.04,
+    "healing": 0.05
   },
   "medusa": {
     "midlane": 9.24,
@@ -773,11 +773,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 7.57,
     "push": 6.19,
-    "nuke": 3,
-    "durable": 10,
-    "initial": 3,
-    "disable": 7.5,
-    "healing": 0.5
+    "nuke": 2.96,
+    "durable": 10.03,
+    "initial": 2.98,
+    "disable": 7.46,
+    "healing": 0.47
   },
   "meepo": {
     "midlane": 8.56,
@@ -788,11 +788,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 7.27,
     "push": 6.88,
-    "nuke": 9,
-    "durable": 7,
+    "nuke": 9.04,
+    "durable": 7.01,
     "initial": 9,
-    "disable": 9,
-    "healing": 0
+    "disable": 8.99,
+    "healing": 0.05
   },
   "mirana": {
     "midlane": 4.9,
@@ -803,11 +803,11 @@ var hero_attributes = {
     "lane": 4.5,
     "dps": 6.71,
     "push": 4.67,
-    "nuke": 8,
-    "durable": 5,
-    "initial": 6,
-    "disable": 4.5,
-    "healing": 0
+    "nuke": 8.05,
+    "durable": 4.97,
+    "initial": 6.01,
+    "disable": 4.54,
+    "healing": 0.04
   },
   "morphling": {
     "midlane": 6.1,
@@ -819,9 +819,9 @@ var hero_attributes = {
     "dps": 7.58,
     "push": 6.59,
     "nuke": 9,
-    "durable": 9.5,
-    "initial": 7.5,
-    "disable": 7.5,
+    "durable": 9.52,
+    "initial": 7.49,
+    "disable": 7.47,
     "healing": 0
   },
   "naga-siren": {
@@ -833,11 +833,11 @@ var hero_attributes = {
     "lane": 6.7,
     "dps": 5.8,
     "push": 5.48,
-    "nuke": 5,
-    "durable": 8.5,
-    "initial": 8.5,
-    "disable": 6,
-    "healing": 1.5
+    "nuke": 5.03,
+    "durable": 8.51,
+    "initial": 8.47,
+    "disable": 6.02,
+    "healing": 1.48
   },
   "necrophos": {
     "midlane": 7.3,
@@ -848,11 +848,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 7.3,
     "push": 3.68,
-    "nuke": 7.5,
-    "durable": 8.5,
-    "initial": 2,
-    "disable": 2,
-    "healing": 8
+    "nuke": 7.54,
+    "durable": 8.48,
+    "initial": 2.02,
+    "disable": 1.96,
+    "healing": 8.01
   },
   "shadow-fiend": {
     "midlane": 8.08,
@@ -863,10 +863,10 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 7.91,
     "push": 6.15,
-    "nuke": 7.5,
-    "durable": 7,
-    "initial": 2,
-    "disable": 2,
+    "nuke": 7.47,
+    "durable": 7.04,
+    "initial": 2.05,
+    "disable": 1.97,
     "healing": 0
   },
   "night-stalker": {
@@ -878,11 +878,11 @@ var hero_attributes = {
     "lane": 5.5,
     "dps": 5.82,
     "push": 5.02,
-    "nuke": 4,
-    "durable": 7.5,
-    "initial": 4,
-    "disable": 8,
-    "healing": 0
+    "nuke": 4.01,
+    "durable": 7.51,
+    "initial": 4.02,
+    "disable": 8.03,
+    "healing": 0.02
   },
   "nyx-assassin": {
     "midlane": 4.99,
@@ -893,11 +893,11 @@ var hero_attributes = {
     "lane": 5,
     "dps": 6.79,
     "push": 1.65,
-    "nuke": 5,
-    "durable": 6,
-    "initial": 6.5,
-    "disable": 7.5,
-    "healing": 1.5
+    "nuke": 4.97,
+    "durable": 5.97,
+    "initial": 6.53,
+    "disable": 7.51,
+    "healing": 1.49
   },
   "outworld-devourer": {
     "midlane": 9.13,
@@ -908,11 +908,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 8.01,
     "push": 5.02,
-    "nuke": 7.5,
-    "durable": 7.5,
-    "initial": 3,
-    "disable": 4.5,
-    "healing": 4.5
+    "nuke": 7.53,
+    "durable": 7.47,
+    "initial": 2.97,
+    "disable": 4.48,
+    "healing": 4.46
   },
   "ogre-magi": {
     "midlane": 5.75,
@@ -923,10 +923,10 @@ var hero_attributes = {
     "lane": 6,
     "dps": 5.33,
     "push": 2.43,
-    "nuke": 4.5,
+    "nuke": 4.49,
     "durable": 5,
-    "initial": 6.5,
-    "disable": 6.5,
+    "initial": 6.53,
+    "disable": 6.46,
     "healing": 1.5
   },
   "omniknight": {
@@ -939,10 +939,10 @@ var hero_attributes = {
     "dps": 3.3,
     "push": 2.97,
     "nuke": 3,
-    "durable": 8,
-    "initial": 2,
-    "disable": 2,
-    "healing": 9
+    "durable": 7.98,
+    "initial": 2.04,
+    "disable": 1.96,
+    "healing": 9.01
   },
   "oracle": {
     "midlane": 8.84,
@@ -953,11 +953,11 @@ var hero_attributes = {
     "lane": 7.7,
     "dps": 3.31,
     "push": 2.42,
-    "nuke": 3.5,
-    "durable": 5.5,
-    "initial": 2,
-    "disable": 4,
-    "healing": 9.5
+    "nuke": 3.51,
+    "durable": 5.48,
+    "initial": 2.02,
+    "disable": 3.95,
+    "healing": 9.48
   },
   "phantom-assassin": {
     "midlane": 6.76,
@@ -968,11 +968,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 7.91,
     "push": 5.31,
-    "nuke": 9,
-    "durable": 8.5,
-    "initial": 8,
-    "disable": 8.5,
-    "healing": 0
+    "nuke": 8.99,
+    "durable": 8.49,
+    "initial": 8.05,
+    "disable": 8.52,
+    "healing": -0.03
   },
   "phantom-lancer": {
     "midlane": 5.62,
@@ -983,11 +983,11 @@ var hero_attributes = {
     "lane": 5,
     "dps": 6.21,
     "push": 5.25,
-    "nuke": 7,
-    "durable": 8.5,
-    "initial": 4.5,
-    "disable": 7.5,
-    "healing": 0
+    "nuke": 6.97,
+    "durable": 8.51,
+    "initial": 4.45,
+    "disable": 7.53,
+    "healing": -0.05
   },
   "phoenix": {
     "midlane": 6.57,
@@ -998,11 +998,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 6.62,
     "push": 2.56,
-    "nuke": 4,
-    "durable": 7.5,
-    "initial": 7,
-    "disable": 6,
-    "healing": 4.5
+    "nuke": 3.99,
+    "durable": 7.48,
+    "initial": 7.01,
+    "disable": 5.99,
+    "healing": 4.47
   },
   "puck": {
     "midlane": 8,
@@ -1013,11 +1013,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 7.38,
     "push": 3.66,
-    "nuke": 6.5,
-    "durable": 7.5,
-    "initial": 8,
-    "disable": 5.5,
-    "healing": 1
+    "nuke": 6.52,
+    "durable": 7.47,
+    "initial": 7.97,
+    "disable": 5.48,
+    "healing": 0.96
   },
   "pudge": {
     "midlane": 5.85,
@@ -1028,11 +1028,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 6.97,
     "push": 2.29,
-    "nuke": 5.5,
-    "durable": 8,
-    "initial": 8,
-    "disable": 8,
-    "healing": 2.5
+    "nuke": 5.51,
+    "durable": 7.98,
+    "initial": 8.04,
+    "disable": 7.99,
+    "healing": 2.45
   },
   "pugna": {
     "midlane": 8.84,
@@ -1043,11 +1043,11 @@ var hero_attributes = {
     "lane": 8,
     "dps": 6.95,
     "push": 5.71,
-    "nuke": 6.5,
-    "durable": 3,
-    "initial": 2,
-    "disable": 5,
-    "healing": 3.5
+    "nuke": 6.46,
+    "durable": 2.97,
+    "initial": 1.97,
+    "disable": 4.99,
+    "healing": 3.55
   },
   "queen-of-pain": {
     "midlane": 8.54,
@@ -1058,11 +1058,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 7.29,
     "push": 4.37,
-    "nuke": 8.5,
-    "durable": 8.5,
-    "initial": 3,
-    "disable": 6.5,
-    "healing": 1
+    "nuke": 8.49,
+    "durable": 8.54,
+    "initial": 3.03,
+    "disable": 6.49,
+    "healing": 1.04
   },
   "clockwerk": {
     "midlane": 0,
@@ -1073,11 +1073,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 7.77,
     "push": 2.69,
-    "nuke": 3,
-    "durable": 7.5,
+    "nuke": 2.96,
+    "durable": 7.51,
     "initial": 8.5,
-    "disable": 6,
-    "healing": 1
+    "disable": 5.99,
+    "healing": 1.04
   },
   "razor": {
     "midlane": 8.97,
@@ -1089,10 +1089,10 @@ var hero_attributes = {
     "dps": 7.29,
     "push": 5.44,
     "nuke": 4.5,
-    "durable": 8,
-    "initial": 3,
-    "disable": 3,
-    "healing": 0
+    "durable": 7.97,
+    "initial": 2.97,
+    "disable": 2.96,
+    "healing": 0.02
   },
   "riki": {
     "midlane": 6.48,
@@ -1103,11 +1103,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 7.44,
     "push": 3.33,
-    "nuke": 6,
-    "durable": 7.5,
-    "initial": 5,
-    "disable": 7,
-    "healing": 0
+    "nuke": 6.01,
+    "durable": 7.54,
+    "initial": 5.02,
+    "disable": 7.04,
+    "healing": 0.03
   },
   "rubick": {
     "midlane": 3.5,
@@ -1118,11 +1118,11 @@ var hero_attributes = {
     "lane": 3.5,
     "dps": 4.15,
     "push": 1.91,
-    "nuke": 5,
-    "durable": 3,
+    "nuke": 4.95,
+    "durable": 2.95,
     "initial": 7,
-    "disable": 7,
-    "healing": 2.5
+    "disable": 6.96,
+    "healing": 2.53
   },
   "sand-king": {
     "midlane": 7.86,
@@ -1133,11 +1133,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 6.5,
     "push": 2.29,
-    "nuke": 6.5,
+    "nuke": 6.45,
     "durable": 6.5,
-    "initial": 8.5,
-    "disable": 8.5,
-    "healing": 1
+    "initial": 8.48,
+    "disable": 8.46,
+    "healing": 1.05
   },
   "shadow-demon": {
     "midlane": 8.57,
@@ -1149,10 +1149,10 @@ var hero_attributes = {
     "dps": 4.6,
     "push": 3.72,
     "nuke": 3,
-    "durable": 3,
-    "initial": 6,
-    "disable": 6.5,
-    "healing": 5
+    "durable": 3.05,
+    "initial": 6.03,
+    "disable": 6.51,
+    "healing": 4.98
   },
   "shadow-shaman": {
     "midlane": 6.11,
@@ -1163,11 +1163,11 @@ var hero_attributes = {
     "lane": 6.3,
     "dps": 5.2,
     "push": 6.18,
-    "nuke": 3.5,
-    "durable": 2,
-    "initial": 7,
-    "disable": 7.5,
-    "healing": 2.5
+    "nuke": 3.51,
+    "durable": 1.98,
+    "initial": 7.05,
+    "disable": 7.47,
+    "healing": 2.54
   },
   "timbersaw": {
     "midlane": 8.04,
@@ -1178,11 +1178,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 8.09,
     "push": 2.76,
-    "nuke": 4,
-    "durable": 9,
-    "initial": 4,
-    "disable": 7.5,
-    "healing": 1.5
+    "nuke": 4.02,
+    "durable": 8.98,
+    "initial": 3.96,
+    "disable": 7.46,
+    "healing": 1.48
   },
   "silencer": {
     "midlane": 7.98,
@@ -1194,10 +1194,10 @@ var hero_attributes = {
     "dps": 6.38,
     "push": 4.41,
     "nuke": 2.5,
-    "durable": 4,
-    "initial": 5.5,
-    "disable": 3.5,
-    "healing": 2
+    "durable": 4.01,
+    "initial": 5.46,
+    "disable": 3.47,
+    "healing": 1.99
   },
   "wraith-king": {
     "midlane": 0,
@@ -1208,11 +1208,11 @@ var hero_attributes = {
     "lane": 5,
     "dps": 6.71,
     "push": 5.78,
-    "nuke": 7.5,
-    "durable": 9.5,
-    "initial": 7.5,
-    "disable": 7,
-    "healing": 3
+    "nuke": 7.47,
+    "durable": 9.46,
+    "initial": 7.55,
+    "disable": 7.01,
+    "healing": 3.03
   },
   "skywrath-mage": {
     "midlane": 7.47,
@@ -1223,11 +1223,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 6.62,
     "push": 2.39,
-    "nuke": 6.5,
-    "durable": 3,
-    "initial": 5,
-    "disable": 5,
-    "healing": 2.5
+    "nuke": 6.55,
+    "durable": 2.98,
+    "initial": 4.98,
+    "disable": 5.03,
+    "healing": 2.46
   },
   "slardar": {
     "midlane": 0,
@@ -1238,11 +1238,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 4.47,
     "push": 3.57,
-    "nuke": 6,
-    "durable": 7.5,
-    "initial": 8,
-    "disable": 9.5,
-    "healing": 1
+    "nuke": 6.04,
+    "durable": 7.47,
+    "initial": 7.95,
+    "disable": 9.47,
+    "healing": 1.04
   },
   "slark": {
     "midlane": 5.09,
@@ -1253,10 +1253,10 @@ var hero_attributes = {
     "lane": 5,
     "dps": 7.3,
     "push": 5.67,
-    "nuke": 6,
-    "durable": 8.5,
-    "initial": 3,
-    "disable": 8,
+    "nuke": 6.05,
+    "durable": 8.48,
+    "initial": 2.99,
+    "disable": 7.99,
     "healing": 0
   },
   "sniper": {
@@ -1268,11 +1268,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 8.2,
     "push": 5.73,
-    "nuke": 5.5,
-    "durable": 7,
-    "initial": 2,
-    "disable": 4,
-    "healing": 0
+    "nuke": 5.54,
+    "durable": 6.99,
+    "initial": 2.01,
+    "disable": 3.97,
+    "healing": 0.04
   },
   "spectre": {
     "midlane": 0,
@@ -1283,11 +1283,11 @@ var hero_attributes = {
     "lane": 4,
     "dps": 9.03,
     "push": 5,
-    "nuke": 4,
-    "durable": 7.5,
-    "initial": 2,
-    "disable": 6,
-    "healing": 0
+    "nuke": 4.02,
+    "durable": 7.49,
+    "initial": 1.97,
+    "disable": 6.02,
+    "healing": 0.01
   },
   "spirit-breaker": {
     "midlane": 7.05,
@@ -1298,11 +1298,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 6.21,
     "push": 3.53,
-    "nuke": 6,
-    "durable": 7.5,
-    "initial": 7.5,
-    "disable": 8,
-    "healing": 1
+    "nuke": 6.03,
+    "durable": 7.45,
+    "initial": 7.54,
+    "disable": 7.99,
+    "healing": 1.02
   },
   "storm-spirit": {
     "midlane": 7.11,
@@ -1313,11 +1313,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 7.55,
     "push": 4.61,
-    "nuke": 8,
-    "durable": 8,
-    "initial": 8,
-    "disable": 9,
-    "healing": 1.5
+    "nuke": 7.98,
+    "durable": 7.99,
+    "initial": 7.96,
+    "disable": 8.96,
+    "healing": 1.52
   },
   "sven": {
     "midlane": 0,
@@ -1328,11 +1328,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 7.8,
     "push": 6.19,
-    "nuke": 9.5,
-    "durable": 8.5,
-    "initial": 6.5,
+    "nuke": 9.52,
+    "durable": 8.52,
+    "initial": 6.45,
     "disable": 5,
-    "healing": 0
+    "healing": 0.03
   },
   "techies": {
     "midlane": 9.18,
@@ -1343,11 +1343,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 6.65,
     "push": 1.07,
-    "nuke": 6.5,
-    "durable": 3,
-    "initial": 6.5,
-    "disable": 2,
-    "healing": 1.5
+    "nuke": 6.51,
+    "durable": 3.01,
+    "initial": 6.46,
+    "disable": 2.01,
+    "healing": 1.48
   },
   "templar-assassin": {
     "midlane": 8.8,
@@ -1358,11 +1358,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 7.03,
     "push": 5.96,
-    "nuke": 9,
-    "durable": 7,
-    "initial": 4.5,
-    "disable": 8,
-    "healing": 0
+    "nuke": 8.98,
+    "durable": 7.01,
+    "initial": 4.48,
+    "disable": 7.96,
+    "healing": -0.01
   },
   "terrorblade": {
     "midlane": 6.82,
@@ -1373,11 +1373,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 6.58,
     "push": 7.1,
-    "nuke": 8.5,
-    "durable": 7.5,
-    "initial": 2,
-    "disable": 4.5,
-    "healing": 1
+    "nuke": 8.46,
+    "durable": 7.54,
+    "initial": 2.04,
+    "disable": 4.48,
+    "healing": 1.04
   },
   "tidehunter": {
     "midlane": 0,
@@ -1389,10 +1389,10 @@ var hero_attributes = {
     "dps": 5.37,
     "push": 2.76,
     "nuke": 4,
-    "durable": 9,
-    "initial": 9,
-    "disable": 5.5,
-    "healing": 2.5
+    "durable": 9.04,
+    "initial": 8.96,
+    "disable": 5.48,
+    "healing": 2.49
   },
   "tinker": {
     "midlane": 8.85,
@@ -1403,11 +1403,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 9.79,
     "push": 0.82,
-    "nuke": 8.5,
-    "durable": 8.5,
-    "initial": 3,
-    "disable": 6.5,
-    "healing": 1
+    "nuke": 8.45,
+    "durable": 8.49,
+    "initial": 2.96,
+    "disable": 6.52,
+    "healing": 0.99
   },
   "tiny": {
     "midlane": 7.41,
@@ -1418,11 +1418,11 @@ var hero_attributes = {
     "lane": 6,
     "dps": 7.18,
     "push": 5.62,
-    "nuke": 9,
-    "durable": 8,
-    "initial": 8,
-    "disable": 7,
-    "healing": 1
+    "nuke": 8.97,
+    "durable": 8.05,
+    "initial": 7.99,
+    "disable": 6.96,
+    "healing": 1.05
   },
   "treant-protector": {
     "midlane": 0,
@@ -1434,10 +1434,10 @@ var hero_attributes = {
     "dps": 2.23,
     "push": 2.83,
     "nuke": 1,
-    "durable": 5.5,
-    "initial": 6.5,
-    "disable": 4.5,
-    "healing": 4.5
+    "durable": 5.52,
+    "initial": 6.53,
+    "disable": 4.53,
+    "healing": 4.48
   },
   "troll-warlord": {
     "midlane": 7.14,
@@ -1448,11 +1448,11 @@ var hero_attributes = {
     "lane": 7.5,
     "dps": 6.7,
     "push": 6.59,
-    "nuke": 7,
-    "durable": 8,
-    "initial": 2,
-    "disable": 6.5,
-    "healing": 0
+    "nuke": 7.04,
+    "durable": 7.96,
+    "initial": 2.03,
+    "disable": 6.54,
+    "healing": 0.03
   },
   "tusk": {
     "midlane": 5.71,
@@ -1463,11 +1463,11 @@ var hero_attributes = {
     "lane": 4.2,
     "dps": 6.01,
     "push": 3.16,
-    "nuke": 6,
-    "durable": 6.5,
-    "initial": 7.5,
+    "nuke": 6.01,
+    "durable": 6.48,
+    "initial": 7.55,
     "disable": 7.5,
-    "healing": 2.5
+    "healing": 2.47
   },
   "undying": {
     "midlane": 0,
@@ -1478,11 +1478,11 @@ var hero_attributes = {
     "lane": 8.2,
     "dps": 4.54,
     "push": 2.98,
-    "nuke": 3,
-    "durable": 8,
-    "initial": 7.5,
+    "nuke": 2.96,
+    "durable": 8.03,
+    "initial": 7.47,
     "disable": 5.5,
-    "healing": 6.5
+    "healing": 6.49
   },
   "underlord": {
     "midlane": 7.13,
@@ -1493,11 +1493,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 6.87,
     "push": 5.08,
-    "nuke": 4,
-    "durable": 8,
-    "initial": 7.5,
-    "disable": 5.5,
-    "healing": 4.5
+    "nuke": 3.99,
+    "durable": 7.98,
+    "initial": 7.49,
+    "disable": 5.49,
+    "healing": 4.48
   },
   "ursa": {
     "midlane": 7.17,
@@ -1508,11 +1508,11 @@ var hero_attributes = {
     "lane": 6.5,
     "dps": 7.54,
     "push": 4.93,
-    "nuke": 10,
-    "durable": 8.5,
-    "initial": 8.5,
-    "disable": 8,
-    "healing": 0
+    "nuke": 10.01,
+    "durable": 8.45,
+    "initial": 8.52,
+    "disable": 8.03,
+    "healing": 0.04
   },
   "vengeful-spirit": {
     "midlane": 5.18,
@@ -1524,9 +1524,9 @@ var hero_attributes = {
     "dps": 4.15,
     "push": 4.18,
     "nuke": 4,
-    "durable": 4,
+    "durable": 4.01,
     "initial": 7.5,
-    "disable": 5.5,
+    "disable": 5.55,
     "healing": 5
   },
   "venomancer": {
@@ -1538,10 +1538,10 @@ var hero_attributes = {
     "lane": 8.8,
     "dps": 7.89,
     "push": 4.35,
-    "nuke": 4.5,
-    "durable": 7,
-    "initial": 6.5,
-    "disable": 7.5,
+    "nuke": 4.54,
+    "durable": 7.02,
+    "initial": 6.47,
+    "disable": 7.52,
     "healing": 2
   },
   "viper": {
@@ -1553,10 +1553,10 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 7.23,
     "push": 5.61,
-    "nuke": 4,
+    "nuke": 4.02,
     "durable": 8.5,
-    "initial": 7.5,
-    "disable": 7.5,
+    "initial": 7.51,
+    "disable": 7.53,
     "healing": 2.5
   },
   "visage": {
@@ -1568,11 +1568,11 @@ var hero_attributes = {
     "lane": 5.7,
     "dps": 5.47,
     "push": 4.64,
-    "nuke": 4,
-    "durable": 6,
-    "initial": 6.5,
-    "disable": 7,
-    "healing": 2
+    "nuke": 3.96,
+    "durable": 6.02,
+    "initial": 6.46,
+    "disable": 6.97,
+    "healing": 2.02
   },
   "warlock": {
     "midlane": 6.96,
@@ -1584,10 +1584,10 @@ var hero_attributes = {
     "dps": 6.85,
     "push": 5.2,
     "nuke": 3,
-    "durable": 6,
-    "initial": 9,
-    "disable": 6,
-    "healing": 4.5
+    "durable": 6.05,
+    "initial": 9.04,
+    "disable": 5.96,
+    "healing": 4.52
   },
   "weaver": {
     "midlane": 8.28,
@@ -1598,11 +1598,11 @@ var hero_attributes = {
     "lane": 8,
     "dps": 7.39,
     "push": 6.04,
-    "nuke": 5.5,
-    "durable": 8.5,
-    "initial": 3,
-    "disable": 5.5,
-    "healing": 0
+    "nuke": 5.54,
+    "durable": 8.53,
+    "initial": 3.02,
+    "disable": 5.55,
+    "healing": 0.05
   },
   "windranger": {
     "midlane": 7.75,
@@ -1614,10 +1614,10 @@ var hero_attributes = {
     "dps": 6.36,
     "push": 5.69,
     "nuke": 7,
-    "durable": 5,
-    "initial": 7.5,
-    "disable": 7.5,
-    "healing": 1
+    "durable": 5.01,
+    "initial": 7.48,
+    "disable": 7.52,
+    "healing": 0.99
   },
   "winter-wyvern": {
     "midlane": 8.17,
@@ -1628,11 +1628,11 @@ var hero_attributes = {
     "lane": 7,
     "dps": 3.48,
     "push": 2.28,
-    "nuke": 2,
-    "durable": 4,
-    "initial": 7,
-    "disable": 3.5,
-    "healing": 6.5
+    "nuke": 1.97,
+    "durable": 3.98,
+    "initial": 6.97,
+    "disable": 3.53,
+    "healing": 6.49
   },
   "io": {
     "midlane": 7.19,
@@ -1643,11 +1643,11 @@ var hero_attributes = {
     "lane": 4,
     "dps": 6.79,
     "push": 6.09,
-    "nuke": 3.5,
-    "durable": 7,
-    "initial": 2,
-    "disable": 7.5,
-    "healing": 9
+    "nuke": 3.48,
+    "durable": 7.04,
+    "initial": 1.98,
+    "disable": 7.46,
+    "healing": 8.98
   },
   "witch-doctor": {
     "midlane": 8.84,
@@ -1658,11 +1658,11 @@ var hero_attributes = {
     "lane": 8.5,
     "dps": 5.24,
     "push": 2.79,
-    "nuke": 7,
-    "durable": 3.5,
-    "initial": 6.5,
-    "disable": 6.5,
-    "healing": 5
+    "nuke": 7.01,
+    "durable": 3.55,
+    "initial": 6.48,
+    "disable": 6.46,
+    "healing": 5.02
   },
   "zeus": {
     "midlane": 8.92,
@@ -1673,10 +1673,10 @@ var hero_attributes = {
     "lane": 8,
     "dps": 10,
     "push": 2.27,
-    "nuke": 8,
+    "nuke": 8.05,
     "durable": 5,
-    "initial": 3,
-    "disable": 6.5,
-    "healing": 1.5
+    "initial": 3.03,
+    "disable": 6.51,
+    "healing": 1.47
   }
 };

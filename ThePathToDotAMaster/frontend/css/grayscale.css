@@ -474,6 +474,12 @@ div.compare_group img:hover {
     .hero-detail .hero_name {
         font-size: 22px;
     }
+    #attribute-compare-chart .col-xs-2 {
+        font-size:11px;
+    }
+    #attribute-compare-chart .col-xs-1 {
+        font-size:9px;
+    }
 }
 @media (max-width: 568px) {
     .pick_hero_icon {
@@ -502,6 +508,9 @@ div.compare_group img:hover {
     }
     .attribute-chart {
         margin-top: 100px;
+    }
+    #attribute-compare-chart .col-xs-2 {
+        font-size:9px;
     }
 }
 #preview{
@@ -672,4 +681,5 @@ svg {
 .position {
     color: white;
 }
+
 

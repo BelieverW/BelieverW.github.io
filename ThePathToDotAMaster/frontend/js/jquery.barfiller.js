@@ -201,7 +201,7 @@
 
 		var object = $(this);
 		var settings = $.extend(defaults, options);
-		var barWidth = $(window).width() * 5 / 12;
+		var barWidth = $(window).width() / 3.5;
 		var fill = object.find('.fill');
 		var toolTip = object.find('.tip');
 		var fillPercentage = fill.attr('data-percentage');
